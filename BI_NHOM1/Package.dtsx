@@ -1,0 +1,3134 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/28/2024 9:34:45 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-OST9FTB"
+  DTS:CreatorName="DESKTOP-OST9FTB\NguyenPhuTrong"
+  DTS:DTSID="{376BB544-35DA-462A-BAB4-8EFC3752CDE7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="82"
+  DTS:VersionGUID="{D4E6FB10-8227-45EF-8046-7AEFA1032523}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-OST9FTB.AirQualityStage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4AED29AB-DD16-44CA-8BA2-88A883962CA4}"
+      DTS:ObjectName="DESKTOP-OST9FTB.AirQualityStage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-OST9FTB;Initial Catalog=AirQualityStage;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{4AED29AB-DD16-44CA-8BA2-88A883962CA4}DESKTOP-OST9FTB.AirQualityStage;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[load_10_state_aqi_2021]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{78BC1FE0-BE7D-4EB3-80FE-D6EBFD2E07CB}"
+      DTS:ObjectName="load_10_state_aqi_2021">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\10_state_aqi_2021.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{CDF7FC00-94B6-4319-9C92-E01F0624F307}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{3135929B-24E0-4B64-93AF-BF306605BBA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{1FEC2423-019C-467E-9746-B8A14005856F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{7DE2FC29-893F-4159-A87E-480C445F2B32}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{A320D019-B2C7-436D-820A-18E14E503BE4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{A38C131B-64BF-492C-85D3-61A0CAA915A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{C360BC8D-B23A-40FA-BF62-A481F620CAD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{F2C3F88C-FD82-4008-82E9-0F36FABDF590}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{C45BC03F-A6B5-4818-BFA6-90C6C6EEE608}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{9A36A2AD-6634-46E8-94C9-AB5DBB404AAF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{F6E72405-3559-4700-8779-E2211E12B9CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{079C1AF4-3C02-4169-91D0-3B8FA61EA35B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[load_10_state_aqi_2022]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{560EB10E-ADBD-4335-BC1A-EA37BF70E2EE}"
+      DTS:ObjectName="load_10_state_aqi_2022">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\10_state_aqi_2022.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{EB47A265-33B4-43E5-B231-16EF6513FCEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{48F4B0EE-FF74-492C-BEB9-E9906BD75742}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{9CF9B9EB-BD68-4258-86B5-1B452B3DB97E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{1A6D5688-3A97-41EB-8D5A-F32B2B672072}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{7CE5A70F-93C3-46A8-89B1-F581FF615360}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{456E76C3-681A-4CDD-8038-2B492E718022}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{FEACE126-A66B-4ED3-9C9B-57FA955743FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{67CE0511-92A9-4A78-8881-BE4A55FB22F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{A05B4CB8-F064-4F05-9040-0E2A8B07B716}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{2749B3C6-F49B-49A4-988A-C042A5BD40F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{5AB97B25-CFE3-42D0-A21D-28B7FDF711D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{7138AF5A-E4E3-4C74-8045-1881E373BB7C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[load_10_state_aqi_2023]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{15C04388-8CF6-48B7-AF5E-53B350F031F0}"
+      DTS:ObjectName="load_10_state_aqi_2023">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\10_state_aqi_2023.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{74BF2006-88BF-461B-B876-9E255B7515E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{6C8368F5-5785-4EF8-BE98-4E1C6AC51E95}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{CDA7B22F-38C9-40F9-BB5A-10AC9D8CCF6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{661C0C95-12DB-4781-8B4A-1682FBF87B9C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{3D796F9D-9C84-465E-B035-728AF9EE935E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{425BA658-CFB0-4824-9EBC-9D8BA4D160CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{75358358-EB32-450F-A42D-23E09D2DC743}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{AFE80778-F7B1-45D0-B875-E7E53FE9952D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{7AE2CF78-84CE-4094-9D63-9A9EB2BBECCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{7B9E05F5-AE5B-4006-BCB5-CEC3156D2E80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{BB03E979-94D5-4537-9079-48D8E72A4689}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{5E72ECD4-8EFD-4AD4-BBB3-8963F5B9314A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[testdata]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7BF01CFC-CAFC-41DF-AD0D-EBE344C5FA66}"
+      DTS:ObjectName="testdata">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\testdata.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STT"
+              DTS:DTSID="{DF20AAD4-9534-4288-A775-5D53037EA29C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ho va Ten"
+              DTS:DTSID="{68CA5A33-7C5A-4242-A26F-6A4851A8B7CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tuoi"
+              DTS:DTSID="{7CED81F3-031A-4FC1-A017-56204174FE59}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dia Chi"
+              DTS:DTSID="{7E7089EB-876E-429A-BCFC-CC0E82A477C6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="2">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">3,7,OnError,13,OnPostExecute,12,OnPreExecute</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPostExecute"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPreExecute"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\source to stage"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B0856BB5-D0C3-4D3A-9701-834FD96EDC4D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="source to stage"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="2" />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\source to stage\10_state_aqi_2021"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="10_state_aqi_2021"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\source to stage\10_state_aqi_2021.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[load_10_state_aqi_2021]"
+                  connectionManagerRefId="Package.ConnectionManagers[load_10_state_aqi_2021]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[State Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[State Name]"
+                      name="State Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[county Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[county Name]"
+                      name="county Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[State Code]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[State Code]"
+                      name="State Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[County Code]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[County Code]"
+                      name="County Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[AQI]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[AQI]"
+                      name="AQI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      name="Defining Parameter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      name="Defining Site"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Created]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      name="Last Updated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      dataType="ui2"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      dataType="ui2"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="date"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      dataType="i2"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      dataType="wstr"
+                      length="255"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      dataType="wstr"
+                      length="255"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      dataType="ui2"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      dataType="date"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      dataType="date"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\source to stage\10_state_aqi_2022"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="10_state_aqi_2022"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\source to stage\10_state_aqi_2022.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[load_10_state_aqi_2022]"
+                  connectionManagerRefId="Package.ConnectionManagers[load_10_state_aqi_2022]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[State Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[State Name]"
+                      name="State Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[county Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[county Name]"
+                      name="county Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[State Code]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[State Code]"
+                      name="State Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[County Code]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[County Code]"
+                      name="County Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[AQI]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[AQI]"
+                      name="AQI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      name="Defining Parameter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      name="Defining Site"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Created]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      name="Last Updated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      dataType="ui2"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      dataType="ui2"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="date"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      dataType="i2"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      dataType="wstr"
+                      length="255"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      dataType="wstr"
+                      length="255"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      dataType="ui2"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      dataType="date"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      dataType="date"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\source to stage\10_state_aqi_2023"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="10_state_aqi_2023"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\source to stage\10_state_aqi_2023.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[load_10_state_aqi_2023]"
+                  connectionManagerRefId="Package.ConnectionManagers[load_10_state_aqi_2023]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[State Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[State Name]"
+                      name="State Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[county Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[county Name]"
+                      name="county Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[State Code]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[State Code]"
+                      name="State Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[County Code]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[County Code]"
+                      name="County Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[AQI]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[AQI]"
+                      name="AQI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                      name="Defining Parameter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      length="255"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Defining Site]"
+                      name="Defining Site"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Created]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      name="Last Updated"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      dataType="ui2"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                      dataType="ui2"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="date"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                      dataType="i2"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                      dataType="wstr"
+                      length="255"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                      dataType="wstr"
+                      length="255"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                      dataType="ui2"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                      dataType="date"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                      dataType="date"
+                      name="Last Updated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\source to stage\AirQualityStage"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="AirQualityStage"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stgAirQuality]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\source to stage\AirQualityStage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-OST9FTB.AirQualityStage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OST9FTB.AirQualityStage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[State Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State Name"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgStateName]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[State Name]" />
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[county Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="county Name"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyName]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[county Name]" />
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[State Code]"
+                      cachedDataType="ui2"
+                      cachedName="State Code"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgStateCode]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[State Code]" />
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[County Code]"
+                      cachedDataType="ui2"
+                      cachedName="County Code"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyCode]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[County Code]" />
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgDate]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[AQI]"
+                      cachedDataType="i2"
+                      cachedName="AQI"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgAQI]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[AQI]" />
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgCategory]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[Defining Parameter]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Parameter"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgDefiPara]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Defining Parameter]" />
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[Defining Site]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Site"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgDefiSite]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Defining Site]" />
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[Number of Sites Reporting]"
+                      cachedDataType="ui2"
+                      cachedName="Number of Sites Reporting"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgNoSR]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Number of Sites Reporting]" />
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[Created]"
+                      cachedDataType="date"
+                      cachedName="Created"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgCreated]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].Columns[Last Updated]"
+                      cachedDataType="date"
+                      cachedName="Last Updated"
+                      externalMetadataColumnId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgLastUpdated]"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Last Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgID]"
+                      dataType="i4"
+                      name="stgID" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgStateName]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgStateName" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyName]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgCountyName" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgStateCode]"
+                      dataType="i4"
+                      name="stgStateCode" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyCode]"
+                      dataType="i4"
+                      name="stgCountyCode" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgDate]"
+                      dataType="dbTimeStamp"
+                      name="stgDate" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgAQI]"
+                      dataType="i4"
+                      name="stgAQI" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgCategory]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgCategory" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgDefiPara]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgDefiPara" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgDefiSite]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgDefiSite" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgNoSR]"
+                      dataType="i4"
+                      name="stgNoSR" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgCreated]"
+                      dataType="dbTimeStamp"
+                      name="stgCreated" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input].ExternalColumns[stgLastUpdated]"
+                      dataType="dbTimeStamp"
+                      name="stgLastUpdated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\source to stage\AirQualityStage.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage\AirQualityStage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\source to stage\AirQualityStage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\source to stage\AirQualityStage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\source to stage\AirQualityStage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\source to stage\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\source to stage\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[State Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State Name"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[county Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="county Name"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[county Name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[State Code]"
+                      cachedDataType="ui2"
+                      cachedName="State Code"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Code]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[County Code]"
+                      cachedDataType="ui2"
+                      cachedName="County Code"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[County Code]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[AQI]"
+                      cachedDataType="i2"
+                      cachedName="AQI"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[AQI]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Category]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[Defining Parameter]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Parameter"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Parameter]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[Defining Site]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Site"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Site]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[Number of Sites Reporting]"
+                      cachedDataType="ui2"
+                      cachedName="Number of Sites Reporting"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Number of Sites Reporting]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[Created]"
+                      cachedDataType="date"
+                      cachedName="Created"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Created]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Sort.Inputs[Sort Input].Columns[Last Updated]"
+                      cachedDataType="date"
+                      cachedName="Last Updated"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Last Updated]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\source to stage\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[State Name]"
+                      name="State Name"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[county Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[county Name]"
+                      name="county Name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[county Name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[State Code]"
+                      dataType="ui2"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[State Code]"
+                      name="State Code">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Code]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[County Code]"
+                      dataType="ui2"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[County Code]"
+                      name="County Code">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[County Code]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Date]"
+                      dataType="date"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Date]"
+                      name="Date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[AQI]"
+                      dataType="i2"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[AQI]"
+                      name="AQI">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[AQI]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Category]"
+                      name="Category">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Defining Parameter]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Defining Parameter]"
+                      name="Defining Parameter">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Parameter]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Defining Site]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Defining Site]"
+                      name="Defining Site">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Site]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Number of Sites Reporting]"
+                      dataType="ui2"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Number of Sites Reporting]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Created]"
+                      dataType="date"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Created]"
+                      name="Created">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Created]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Last Updated]"
+                      dataType="date"
+                      lineageId="Package\source to stage\Sort.Outputs[Sort Output].Columns[Last Updated]"
+                      name="Last Updated">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Last Updated]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\source to stage\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\source to stage\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[State Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State Name"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[State Name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[county Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="county Name"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[county Name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[county Name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[State Code]"
+                      cachedDataType="ui2"
+                      cachedName="State Code"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[State Code]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Code]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[County Code]"
+                      cachedDataType="ui2"
+                      cachedName="County Code"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[County Code]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[County Code]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[AQI]"
+                      cachedDataType="i2"
+                      cachedName="AQI"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[AQI]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[AQI]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[Defining Parameter]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Parameter"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Defining Parameter]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Parameter]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[Defining Site]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Site"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Defining Site]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Site]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[Number of Sites Reporting]"
+                      cachedDataType="ui2"
+                      cachedName="Number of Sites Reporting"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Number of Sites Reporting]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[Created]"
+                      cachedDataType="date"
+                      cachedName="Created"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Created]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Created]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 1].Columns[Last Updated]"
+                      cachedDataType="date"
+                      cachedName="Last Updated"
+                      lineageId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Last Updated]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Last Updated]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\source to stage\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[State Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State Name"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[State Name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[county Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="county Name"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[county Name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[county Name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[State Code]"
+                      cachedDataType="ui2"
+                      cachedName="State Code"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[State Code]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Code]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[County Code]"
+                      cachedDataType="ui2"
+                      cachedName="County Code"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[County Code]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[County Code]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[AQI]"
+                      cachedDataType="i2"
+                      cachedName="AQI"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[AQI]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[AQI]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[Defining Parameter]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Parameter"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Defining Parameter]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Parameter]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[Defining Site]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Site"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Defining Site]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Site]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[Number of Sites Reporting]"
+                      cachedDataType="ui2"
+                      cachedName="Number of Sites Reporting"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Number of Sites Reporting]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[Created]"
+                      cachedDataType="date"
+                      cachedName="Created"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Created]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Created]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 2].Columns[Last Updated]"
+                      cachedDataType="date"
+                      cachedName="Last Updated"
+                      lineageId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Last Updated]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Last Updated]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\source to stage\Union All.Inputs[Union All Input 4]"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[State Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State Name"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[State Name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[county Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="county Name"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[county Name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[county Name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[State Code]"
+                      cachedDataType="ui2"
+                      cachedName="State Code"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[State Code]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Code]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[County Code]"
+                      cachedDataType="ui2"
+                      cachedName="County Code"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[County Code]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[County Code]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[AQI]"
+                      cachedDataType="i2"
+                      cachedName="AQI"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[AQI]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[AQI]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[Defining Parameter]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Parameter"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Defining Parameter]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Parameter]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[Defining Site]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Site"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Defining Site]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Site]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[Number of Sites Reporting]"
+                      cachedDataType="ui2"
+                      cachedName="Number of Sites Reporting"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Number of Sites Reporting]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[Created]"
+                      cachedDataType="date"
+                      cachedName="Created"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Created]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Created]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage\Union All.Inputs[Union All Input 4].Columns[Last Updated]"
+                      cachedDataType="date"
+                      cachedName="Last Updated"
+                      lineageId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output].Columns[Last Updated]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Last Updated]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\source to stage\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\source to stage\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Name]"
+                      name="State Name" />
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[county Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[county Name]"
+                      name="county Name" />
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Code]"
+                      dataType="ui2"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[State Code]"
+                      name="State Code" />
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[County Code]"
+                      dataType="ui2"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[County Code]"
+                      name="County Code" />
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Date]"
+                      dataType="date"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[AQI]"
+                      dataType="i2"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[AQI]"
+                      name="AQI" />
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Parameter]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Parameter]"
+                      name="Defining Parameter" />
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Site]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Defining Site]"
+                      name="Defining Site" />
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Number of Sites Reporting]"
+                      dataType="ui2"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting" />
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Created]"
+                      dataType="date"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Created]"
+                      name="Created" />
+                    <outputColumn
+                      refId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Last Updated]"
+                      dataType="date"
+                      lineageId="Package\source to stage\Union All.Outputs[Union All Output 1].Columns[Last Updated]"
+                      name="Last Updated" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\source to stage.Paths[Flat File Source Output]"
+              endId="Package\source to stage\Union All.Inputs[Union All Input 1]"
+              name="Flat File Source Output"
+              startId="Package\source to stage\10_state_aqi_2021.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\source to stage.Paths[Flat File Source Output1]"
+              endId="Package\source to stage\Union All.Inputs[Union All Input 2]"
+              name="Flat File Source Output"
+              startId="Package\source to stage\10_state_aqi_2022.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\source to stage.Paths[Flat File Source Output2]"
+              endId="Package\source to stage\Union All.Inputs[Union All Input 4]"
+              name="Flat File Source Output"
+              startId="Package\source to stage\10_state_aqi_2023.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\source to stage.Paths[Sort Output]"
+              endId="Package\source to stage\AirQualityStage.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\source to stage\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\source to stage.Paths[Union All Output 1]"
+              endId="Package\source to stage\Sort.Inputs[Sort Input]"
+              name="Union All Output 1"
+              startId="Package\source to stage\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\truncate stage table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D2F6A2C5-C80B-4135-8A49-3891CB1867AF}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="truncate stage table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4AED29AB-DD16-44CA-8BA2-88A883962CA4}"
+          SQLTask:SqlStatementSource="truncate table stgAirQuality" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{4FEBE944-D5E9-4629-89D8-4680DAF01D1B}"
+      DTS:From="Package\truncate stage table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\source to stage" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\source to stage"
+          TopLeft="190.714286120267,164.411764561769" />
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\truncate stage table"
+          TopLeft="182.142857530591,64.2352940613423" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="267.228571825429,105.835294061342">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.5764705004271"
+              Start="0,0"
+              End="0,51.0764705004271">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.0764705004271" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\source to stage">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\source to stage\10_state_aqi_2021"
+          TopLeft="100.71428592868,94.0588234469656" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\source to stage\AirQualityStage"
+          TopLeft="347.857143597639,406.823529055168" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\source to stage\10_state_aqi_2022"
+          TopLeft="335.714286428933,94.0588234469655" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\source to stage\10_state_aqi_2023"
+          TopLeft="568.571429781768,94.0588234469656" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\source to stage\Union All"
+          TopLeft="358.571429334733,232.470588031525" />
+        <EdgeLayout
+          Id="Package\source to stage.Paths[Flat File Source Output]"
+          TopLeft="184.71428592868,135.658823446966">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="205.857143406053,96.8117645845591"
+              Start="0,0"
+              End="205.857143406053,89.3117645845591">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.1381073377559" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59.1381073377559"
+                    Point2="0,63.1381073377559"
+                    Point3="4,63.1381073377559" />
+                  <mssgle:LineSegment
+                    End="201.857143406053,63.1381073377559" />
+                  <mssgle:CubicBezierSegment
+                    Point1="201.857143406053,63.1381073377559"
+                    Point2="205.857143406053,63.1381073377559"
+                    Point3="205.857143406053,67.1381073377559" />
+                  <mssgle:LineSegment
+                    End="205.857143406053,89.3117645845591" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage.Paths[Flat File Source Output1]"
+          TopLeft="419.142857881833,135.658823446966">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,96.8117645845591"
+              Start="0,0"
+              End="0,89.3117645845591">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,89.3117645845591" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage.Paths[Flat File Source Output2]"
+          TopLeft="652.571429781768,135.658823446966">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-206.000000447035,96.8117645845591"
+              Start="0,0"
+              End="-206.000000447035,89.3117645845591">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.1381073377559" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59.1381073377559"
+                    Point2="0,63.1381073377559"
+                    Point3="-4,63.1381073377559" />
+                  <mssgle:LineSegment
+                    End="-202.000000447035,63.1381073377559" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-202.000000447035,63.1381073377559"
+                    Point2="-206.000000447035,63.1381073377559"
+                    Point3="-206.000000447035,67.1381073377559" />
+                  <mssgle:LineSegment
+                    End="-206.000000447035,89.3117645845591" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\source to stage\Sort"
+          TopLeft="370.714286503439,321.176470306712" />
+        <EdgeLayout
+          Id="Package\source to stage.Paths[Union All Output 1]"
+          TopLeft="419.042857919086,274.070588031525">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.105882275187"
+              Start="0,0"
+              End="0,39.605882275187">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.605882275187" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage.Paths[Sort Output]"
+          TopLeft="421.285715050539,362.776470306712">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.0470587484564"
+              Start="0,0"
+              End="0,36.5470587484564">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5470587484564" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\source to stage\AirQualityStage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
