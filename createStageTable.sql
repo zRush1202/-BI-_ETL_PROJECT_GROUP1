@@ -1,3 +1,5 @@
+create database AirQualityStage;
+
 use AirQualityStage;
 
 create table stgAirQuality (
@@ -16,7 +18,7 @@ create table stgAirQuality (
 	stgLastUpdated datetime
 );
 
-select* from stgAirQuality;
+select * from stgAirQuality;
 
 truncate table stgAirQuality;
 
@@ -33,5 +35,5 @@ create table stgUSCounty (
 	stgPopulation bigint
 );
 
-select* from stgUSCounty where stgUSCID = 1;
+select * from stgUSCounty where stgUSCID = 1;
 select * from stgAirQuality where stgCountyName = 'Los Angeles';
