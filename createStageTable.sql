@@ -1,9 +1,9 @@
 create database AirQualityStage;
 
-use AirQualityStage;
+use AirQualityStage;	
 
 create table stgAirQuality (
-	stgID int identity(1,1) primary key,
+	stgID nvarchar(255) primary key,
 	stgStateName nvarchar(255),
 	stgCountyName nvarchar(255),
 	stgStateCode int,
