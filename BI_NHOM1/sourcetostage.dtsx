@@ -5,41 +5,17 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-OST9FTB"
   DTS:CreatorName="DESKTOP-OST9FTB\NguyenPhuTrong"
-  DTS:DTSID="{3B2495C5-8F4C-4E59-82A6-2ECC41A97437}"
+  DTS:DTSID="{2114C62A-CB1D-4069-8341-57DF3260F852}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5685.0"
   DTS:LocaleID="2057"
-  DTS:ObjectName="sourcetostage"
+  DTS:ObjectName="SourceToStage"
   DTS:PackageType="5"
-  DTS:VersionBuild="140"
-  DTS:VersionGUID="{554CACE1-867B-4F1F-82F9-BB00C12E73E7}">
+  DTS:VersionBuild="155"
+  DTS:VersionGUID="{AA7D3E74-4B54-4E93-9A9C-65B7CE99D1B1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-OST9FTB.Metadata]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{2792D73A-2042-450B-9791-26C6A0C6F869}"
-      DTS:ObjectName="DESKTOP-OST9FTB.Metadata">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-OST9FTB;Initial Catalog=Metadata;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{2792D73A-2042-450B-9791-26C6A0C6F869}DESKTOP-OST9FTB.Metadata;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-OST9FTB.Stage]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{F69F8B48-54F4-4055-9CB7-AD429C2EF9C6}"
-      DTS:ObjectName="DESKTOP-OST9FTB.Stage">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-OST9FTB;Initial Catalog=Stage;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{F69F8B48-54F4-4055-9CB7-AD429C2EF9C6}DESKTOP-OST9FTB.Stage;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[errorExtractFile]"
       DTS:CreationName="FLATFILE"
@@ -49,11 +25,12 @@
         <DTS:ConnectionManager
           DTS:Format="Delimited"
           DTS:LocaleID="2057"
+          DTS:Unicode="True"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\errorExtract.csv">
+          DTS:ConnectionString="C:\Users\O8360\Desktop\errorRow.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -62,7 +39,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="State Name"
-              DTS:DTSID="{BA595761-0885-4C66-B1A6-E0C92FA85F0D}"
+              DTS:DTSID="{C5FEC71B-D522-4887-9582-A2AC2073CC8D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -71,7 +48,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county Name"
-              DTS:DTSID="{113CE67A-1882-4092-A56F-D6A4495AD60E}"
+              DTS:DTSID="{DD2FBAFA-A598-43D6-B8F3-418C44A80A3C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -79,7 +56,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="State Code"
-              DTS:DTSID="{F084C31C-F744-4E92-B45D-DCE0D34F0D07}"
+              DTS:DTSID="{53E3F726-69FC-48B8-B11F-BA33826267A1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -87,7 +64,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="County Code"
-              DTS:DTSID="{728B78CF-5C06-4F84-9775-F1181B583135}"
+              DTS:DTSID="{5F9A5121-107D-40DF-BA3C-A164B77C2570}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -95,7 +72,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{84656D00-0751-456E-8A84-1B5A9AD1EB65}"
+              DTS:DTSID="{9D73EC7C-7369-4ECE-8803-DE7DD686E7F8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -103,7 +80,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="AQI"
-              DTS:DTSID="{AB49F2AB-B67F-445C-B100-C70751F90AE0}"
+              DTS:DTSID="{77CC73D0-33D1-448C-B8B2-29EE0C640B73}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -112,7 +89,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{94EDC0D6-452E-4C4B-81F2-5E8FAD7C0037}"
+              DTS:DTSID="{7F5E84FA-5C63-4207-A816-890AC40A95B5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -121,7 +98,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Parameter"
-              DTS:DTSID="{8A775C38-418E-4896-8823-B0373FEA7701}"
+              DTS:DTSID="{94AA4B76-DB6C-4B4D-9879-7797BE5CAFAA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -130,7 +107,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Site"
-              DTS:DTSID="{8B3CDD43-17A4-4D21-84E6-0D387D8027C8}"
+              DTS:DTSID="{AAC42867-7CFB-48F9-8396-942D0414DB1F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +115,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Sites Reporting"
-              DTS:DTSID="{4AE53A16-E22C-48E6-8B79-BD616D0D2752}"
+              DTS:DTSID="{E36EDD2E-0C5A-42EF-8B2C-D8E012B1ABC0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,7 +123,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Created"
-              DTS:DTSID="{436D146B-4DDE-43C3-B2FC-4520BC495930}"
+              DTS:DTSID="{C6AA31C0-FA0C-43A0-9A85-421FE1665CC3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -154,7 +131,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated"
-              DTS:DTSID="{7212003B-9B4E-449C-B78A-102F28337DA8}"
+              DTS:DTSID="{95982866-6FB2-4CA9-A410-886E5698EEFD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -162,7 +139,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{6EC11192-0F96-442E-8E7B-5F90C8842600}"
+              DTS:DTSID="{9BCBF64A-9487-4974-942E-9F1715320C58}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -170,7 +147,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{FD166022-A893-467C-8C08-12C95A9B91CB}"
+              DTS:DTSID="{07950A03-E353-41B7-804D-71CE702481B7}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -190,7 +167,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\10_state_aqi_2021.csv">
+          DTS:ConnectionString="C:\Users\O8360\Desktop\10_state_aqi_2021.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -199,7 +176,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="State Name"
-              DTS:DTSID="{30B4617F-EE51-45CC-A8FD-7024B82AAB7D}"
+              DTS:DTSID="{B16C2876-A146-4F18-8F9C-79938D3728A2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -208,7 +185,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county Name"
-              DTS:DTSID="{D7FE1634-06E6-4588-964E-216AD9D509D3}"
+              DTS:DTSID="{5178C9B1-BC65-4E8B-B878-11F8B94E738D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -216,7 +193,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="State Code"
-              DTS:DTSID="{624B1413-35DB-4176-864A-D443BCC2C01D}"
+              DTS:DTSID="{C406882B-14D8-41BA-B982-2BAD62D03E35}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -224,7 +201,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="County Code"
-              DTS:DTSID="{F26223A1-42F2-46AF-9615-6E0D6FD977F7}"
+              DTS:DTSID="{389B8779-0EA8-465B-BD11-B8112434DB2B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -232,7 +209,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{F8D4C6BA-5618-474F-8C18-3682B50E3C52}"
+              DTS:DTSID="{26E9C493-5BFA-407E-B53D-0FC7E3BF9646}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -240,7 +217,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="AQI"
-              DTS:DTSID="{9BD2B70E-6245-4249-A090-3476D587AE08}"
+              DTS:DTSID="{63679577-5F7B-4015-90A5-F93FBDE7B7BA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -249,7 +226,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{1E9B11DB-7F3C-41CD-88CB-3447F7CC77EA}"
+              DTS:DTSID="{640E7F00-980B-4920-8ADD-DD76E3D0B3BA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -258,7 +235,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Parameter"
-              DTS:DTSID="{BC7B2664-CE0D-4BE5-8108-A229373A2995}"
+              DTS:DTSID="{E3F7C7CD-3E9C-4070-B63A-54824F3EA11E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -267,7 +244,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Site"
-              DTS:DTSID="{6C4501C8-09AF-4950-BF51-6C5B3EA46C6E}"
+              DTS:DTSID="{559A11E1-383C-431E-9876-0D3C89686442}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -275,7 +252,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Sites Reporting"
-              DTS:DTSID="{DFB7687C-C2A7-45AF-9F36-17B3C52C2E7F}"
+              DTS:DTSID="{8B5F0718-2905-42F2-B717-D35343FEF827}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -283,7 +260,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Created"
-              DTS:DTSID="{50AC2DBF-D5B7-40C0-8BE0-3DCB2DD641E5}"
+              DTS:DTSID="{44719C37-29EB-447B-BA75-4ABCF2D043CD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -291,7 +268,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated"
-              DTS:DTSID="{1BFE2DB8-0ED1-47E7-9F24-B6879C61B6BB}"
+              DTS:DTSID="{BBA61E64-EA43-4E41-9CDD-616684863BE3}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -311,7 +288,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\10_state_aqi_2022.csv">
+          DTS:ConnectionString="C:\Users\O8360\Desktop\10_state_aqi_2022.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -320,7 +297,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="State Name"
-              DTS:DTSID="{C93CEDDF-AD16-4A7D-8066-963071A4244F}"
+              DTS:DTSID="{ED25E251-00C7-4CF7-81E7-29D311F81F2D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -329,7 +306,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county Name"
-              DTS:DTSID="{ECAB0770-B232-490A-9456-EE52F3BE5F59}"
+              DTS:DTSID="{EFCFBE9C-FC2F-4D54-90C2-1FCE304D48DF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -337,7 +314,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="State Code"
-              DTS:DTSID="{02EBFCD7-051E-4FBF-BBEE-2FB386532455}"
+              DTS:DTSID="{0D57B07F-4522-43CE-A516-164A490D4994}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -345,7 +322,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="County Code"
-              DTS:DTSID="{8CF08E4A-EF0B-427C-A6F8-64417A0D6159}"
+              DTS:DTSID="{E04EAA8D-AA6F-43DB-9607-850B3535837F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -353,7 +330,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{B5A0F7C0-8E38-4FDC-BF48-2DDF9AA88771}"
+              DTS:DTSID="{494EC242-30CC-460C-B700-63EE8D1CB387}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -361,7 +338,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="AQI"
-              DTS:DTSID="{F1DEA2EB-E9CF-4ABB-AC76-9D166AF8970B}"
+              DTS:DTSID="{3897AF42-2AD6-4736-89D1-8F4C07E5BD80}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -370,7 +347,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{C91E981F-AF6D-4791-9687-28DDBAAF9708}"
+              DTS:DTSID="{932BA0F1-79D2-4ACF-AB2E-0C1FA3FD79AA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -379,7 +356,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Parameter"
-              DTS:DTSID="{DC404BA8-3F8E-4F08-BA62-EAD62A1C1210}"
+              DTS:DTSID="{64A2E651-C75D-42D3-B51C-051CF107422D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -388,7 +365,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Site"
-              DTS:DTSID="{A2F6F016-8F4C-487E-B8BF-8BB5D69D85F1}"
+              DTS:DTSID="{F60E4EFB-3067-4CC5-AD4B-352736D8CFFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -396,7 +373,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Sites Reporting"
-              DTS:DTSID="{F901309D-BB8E-4DC1-A0EC-F46CF9CF8659}"
+              DTS:DTSID="{36114415-6AD1-4E5B-8E67-037E6DEFAD47}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -404,7 +381,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Created"
-              DTS:DTSID="{239D7065-F4AD-4146-97D0-62BB3747C9BF}"
+              DTS:DTSID="{E9C42F54-C852-4881-9228-781FEA804DAD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -412,7 +389,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated"
-              DTS:DTSID="{F7E0EC83-37F4-4BC4-BFC7-BEAE4CDC6CB9}"
+              DTS:DTSID="{06F7E9E4-7E68-4F98-A9D6-18BC364FD158}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -432,7 +409,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\10_state_aqi_2023.csv">
+          DTS:ConnectionString="C:\Users\O8360\Desktop\10_state_aqi_2023.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -441,7 +418,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="State Name"
-              DTS:DTSID="{486C98F1-D45E-45D0-A1DA-C004FD9BFEA8}"
+              DTS:DTSID="{CA5CD5F6-DDD8-4459-B3F3-20C35C7CD91F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -450,7 +427,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county Name"
-              DTS:DTSID="{0EBF84E6-32D0-47C4-85B1-2968D601BEA2}"
+              DTS:DTSID="{7A4AA8CC-2B42-4BB0-8A67-DFD60BC1351B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -458,7 +435,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="State Code"
-              DTS:DTSID="{CD0A1C24-33FE-45BC-AA6D-D9E052B017B3}"
+              DTS:DTSID="{6C7D9808-6FBC-4CC5-9522-C17A8CE3148E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -466,7 +443,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="County Code"
-              DTS:DTSID="{4E4A0613-965B-4154-83F9-9A7CF28A1F2E}"
+              DTS:DTSID="{DBE9FA0E-0101-4434-A374-402045085E4A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -474,7 +451,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{E7134233-C156-4360-B428-513F303E1CCA}"
+              DTS:DTSID="{F1CA6347-1589-4E13-91E5-6CA0795364E3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -482,7 +459,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="AQI"
-              DTS:DTSID="{C14F3DC3-83E3-40BB-89E5-9458742D7A74}"
+              DTS:DTSID="{32EB2E03-8E83-4930-BA77-381740A141A4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -491,7 +468,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{7EA1EA3E-B7BC-410E-84A1-1A793150D0DE}"
+              DTS:DTSID="{F51D3D23-D23D-4F46-8796-C34D5AA71B79}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -500,7 +477,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Parameter"
-              DTS:DTSID="{A1CD7BD5-5321-4AE5-AF23-365DC83EDAE4}"
+              DTS:DTSID="{37CE2872-917B-4836-AA61-A204E294D6F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -509,7 +486,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Site"
-              DTS:DTSID="{D87B787C-DD06-44D4-8750-43F65289A015}"
+              DTS:DTSID="{C0C4E7F6-52D4-45DC-9692-3D182E211D42}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -517,7 +494,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Sites Reporting"
-              DTS:DTSID="{DFCF5D36-28F1-45AF-9619-D112D36B2972}"
+              DTS:DTSID="{D6452B0E-0158-4916-BD1A-9E4FBE41B252}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -525,7 +502,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Created"
-              DTS:DTSID="{3B88CECE-9AE8-473F-BCEA-DF7748158E47}"
+              DTS:DTSID="{11EF798D-5AFC-4A3B-A6EB-35CBA3BBDA91}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -533,10 +510,34 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated"
-              DTS:DTSID="{967642E1-9362-4593-AF5F-64B07B5385F8}"
+              DTS:DTSID="{E70FB5F8-111B-4445-8462-3C93F695FAEC}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PHUC.Metadata]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2792D73A-2042-450B-9791-26C6A0C6F869}"
+      DTS:ObjectName="PHUC.Metadata">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=PELNUCHY\PHUC;Initial Catalog=DATHMetadata;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{2792D73A-2042-450B-9791-26C6A0C6F869}DESKTOP-OST9FTB.Metadata;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PHUC.Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F69F8B48-54F4-4055-9CB7-AD429C2EF9C6}"
+      DTS:ObjectName="PHUC.Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=PELNUCHY\PHUC;Initial Catalog=Stage;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{F69F8B48-54F4-4055-9CB7-AD429C2EF9C6}DESKTOP-OST9FTB.Stage;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -553,7 +554,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\(2B)uscounties.csv">
+          DTS:ConnectionString="C:\Users\O8360\Desktop\uscounties.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -562,7 +563,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county"
-              DTS:DTSID="{95BADD02-B32C-42FF-849D-5A6D079EE5E4}"
+              DTS:DTSID="{59A21519-55EC-44C6-9FA2-7A37FD90FA81}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -571,7 +572,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county_ascii"
-              DTS:DTSID="{8E393EE3-0763-4260-BE21-3BDEFEC3E8D4}"
+              DTS:DTSID="{D75F3380-51E8-4CC9-8AEA-C8DB2236C2E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -580,7 +581,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county_full"
-              DTS:DTSID="{E6AF7823-EE25-43BD-BD1D-FEE90123A29B}"
+              DTS:DTSID="{82C08E76-F150-428E-932A-DB5FDFA309E7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -588,7 +589,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="county_fips"
-              DTS:DTSID="{BC6AC507-14AB-4CDE-A521-A2B4E4BBBC8C}"
+              DTS:DTSID="{60C707FB-F8CB-4744-8829-054B0BFCF984}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -597,7 +598,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="state_id"
-              DTS:DTSID="{36161E62-9789-4ECB-AF14-94F087AE7305}"
+              DTS:DTSID="{851068B2-5666-4BC7-BE24-5D2CA301F1E4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -606,7 +607,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="state_name"
-              DTS:DTSID="{E0B0EF94-8E8E-41D4-AB56-543555DC6F64}"
+              DTS:DTSID="{71C6006A-B6EF-400F-9253-C8B3BB58A6B7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -614,7 +615,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="lat"
-              DTS:DTSID="{F962FE77-BAF1-4EEE-870E-72C05790D93E}"
+              DTS:DTSID="{146CDD80-7805-4403-ADE7-07B7CBE16283}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -622,7 +623,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="lng"
-              DTS:DTSID="{53886D97-23D8-4810-8BAD-2CFEB3E986E0}"
+              DTS:DTSID="{E81A09FD-EA4C-4392-8D15-4F67F3BB679B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -630,7 +631,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="population"
-              DTS:DTSID="{E1004AB4-C062-4E96-B263-DBC854AC1180}"
+              DTS:DTSID="{BB850208-962C-4FCF-826D-F221A617604D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -2453,7 +2454,93 @@ namespace SC_4a6a7b15c82d459faf7fe7548da86abb.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                     <arrayElement
-                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{a6e033aa-736f-4ab7-a3bc-021c971dd578}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>SC_4a6a7b15c82d459faf7fe7548da86abb</RootNamespace><AssemblyName>SC_F9DC1E75DF174637A64444017392F76F</AssemblyName><TargetFrameworkVersion>v4.7</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Compile Include="main.cs" /><Compile Include="BufferWrapper.cs" /><Compile Include="ComponentWrapper.cs" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><!-- This section defines VSTA properties that describe the host-changable project properties. --><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptComponent" GeneratedNamespace="SC_4a6a7b15c82d459faf7fe7548da86abb" IconIndex="0"></Host><ProjectClient><HostIdentifier>SSIS_SC160</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></arrayElement>
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a6e033aa-736f-4ab7-a3bc-021c971dd578}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_4a6a7b15c82d459faf7fe7548da86abb</RootNamespace>
+    <AssemblyName>SC_F9DC1E75DF174637A64444017392F76F</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_4a6a7b15c82d459faf7fe7548da86abb" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC160</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[Project]]></arrayElement>
                     <arrayElement
@@ -2465,7 +2552,7 @@ namespace SC_4a6a7b15c82d459faf7fe7548da86abb.Properties {
     <msb:CodeName>SC_4a6a7b15c82d459faf7fe7548da86abb</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_4a6a7b15c82d459faf7fe7548da86abb</msb:DisplayName>
-    <msb:ProjectId>{2B040595-D458-43E1-8C8E-10D15C0AB26A}</msb:ProjectId>
+    <msb:ProjectId>{1E2F125B-9285-4C2C-BFA5-983D09C4F65F}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_4a6a7b15c82d459faf7fe7548da86abb.csproj" />
@@ -2606,7 +2693,137 @@ namespace SC_4a6a7b15c82d459faf7fe7548da86abb.Properties {
                   name="BinaryCode"
                   state="cdata">
                   <arrayElements
-                    arrayElementCount="0" />
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_F9DC1E75DF174637A64444017392F76F.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[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
+AAADAOEDAAABALoCAAABALoCAAABABcAAAACAIAAAAADAA0EAAAEAOEDAAABAA0EAAABAAYGAAAB
+AI8FAAABAI8FAAABALoCCQAoBAEAEQAoBAYAGQAoBAoAKQAoBBAAMQAoBBAAOQAoBBAAQQAoBBAA
+SQAoBBAAUQAoBBAAWQAoBBAAYQAoBBAAaQAoBAYAmQAoBAYAuQAoBBUAyQAoBAYAiQCjAgYAiQCu
+AgYA0QDaAh8A2QBFBSMAcQAoBCkAcQA5AzMAcQAxAwEA4QAoBBAAcQACBjkAcQBTBTkAiQAoBAYA
+2QAyBT0AiQAYBUQAkQAoBAYA8QBuAEoA8QAKBlEAoQAoBFcAwQAoBAYALgALANcALgATAOAALgAb
+AP8ALgAjAAgBLgArADEBLgAzADEBLgA7ADEBLgBDAAgBLgBLADcBLgBTADEBLgBbAE4BQwBjAJgB
+aQBzAP8AiQBzAP8A4wBrAJgBAQF7AJgBGwADAAEABwADAAgABQAAABwAwAAAACcDxAAAABgEyAAA
+ANAAzQAAAGMF0gABAAYAAwABAAcABQACABEABwACABIACQABABMACQACABQACwAEgAAAAQAAAAAA
+AAAAAAAAAAAfAAAABAAAAAAAAAAAAAAAXwBDAAAAAAAQAAAAAAAAAAAAAABoAJkFAAAAABAAAAAA
+AAAAAAAAAGgAtgUAAAAABAAAAAAAAAAAAAAAXwBCAwAAAAAAAAAAAQAAAHkEAAAAAAAAAEludDMy
+ADxNb2R1bGU+AHNldF9JRABJbnB1dElEAFNDX0Y5REMxRTc1REYxNzQ2MzdBNjQ0NDQwMTczOTJG
+NzZGAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJv
+bUhhbmRsZQBJbnB1dE5hbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAVHlwZQBn
+ZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5n
+c0Jhc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVi
+dWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dz
+YWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0
+cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRy
+aWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25z
+QXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJp
+YnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBh
+bnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0
+RXhlY3V0ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFRvU3RyaW5nAGkAU3lzdGVt
+LkNvbXBvbmVudE1vZGVsAFNDX0Y5REMxRTc1REYxNzQ2MzdBNjQ0NDQwMTczOTJGNzZGLmRsbABz
+ZXRfSURfSXNOdWxsAFNldE51bGwAc2V0X0l0ZW0AU3lzdGVtAHJlc291cmNlTWFuAFNjcmlwdE1h
+aW4AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxl
+Y3Rpb24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBTdHJpbmdDb21wYXJpc29uAEN1bHR1cmVJ
+bmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAElucHV0MEJ1ZmZlcgBQaXBlbGluZUJ1ZmZlcgBT
+Y3JpcHRCdWZmZXIAZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdu
+b3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBT
+Q180YTZhN2IxNWM4MmQ0NTlmYWY3ZmU3NTQ4ZGE4NmFiYi5Qcm9wZXJ0aWVzLlJlc291cmNlcy5y
+ZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfNGE2YTdiMTVjODJkNDU5ZmFmN2ZlNzU0OGRhODZh
+YmIuUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRl
+eGVzAFNldHRpbmdzAEVxdWFscwBDb25uZWN0aW9ucwBDb25jYXQAT2JqZWN0AEVuZE9mUm93c2V0
+AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBvbmVu
+dABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlwZWxp
+bmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQASW5wdXQwX1Byb2Nlc3NJbnB1dFJvdwBOZXh0Um93
+AGdldF9Bc3NlbWJseQAAABFBAFEASQAyADAAMgAxAF8AAICbSQBzAE4AdQBsAGwAIABwAHIAbwBw
+AGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4A
+IABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBu
+ACAAaQBuAHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADQAYQA2AGEANwBiADEA
+NQBjADgAMgBkADQANQA5AGYAYQBmADcAZgBlADcANQA0ADgAZABhADgANgBhAGIAYgAuAFAAcgBv
+AHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAADHr0lUbsYiTIhJpDLF8u/bAAQg
+AQEIAyAAAQUgAQEREQQgAQEOBSABARFZAwcBCAMgAA4FAAIODg4JIAMBEj0dCBJBBSACAQgcAyAA
+AgYgAgIOEXUFIAEdCAgGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJECBggD
+BhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwEIAEBAgkgBAEIDhI9EkEFIAEBEkUEAAASUQQA
+ABJVBQABARJVBAAAEiADAAABAygADgMoAAIECAASUQQIABJVBAgAEiAIAQAIAAAAAAAeAQABAFQC
+FldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzRhNmE3YjE1YzgyZDQ1OWZh
+ZjdmZTc1NDhkYTg2YWJiAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjQAAEkBABouTkVURnJh
+bWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdv
+cmsgNC43BAEAAAAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VS
+ZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGlj
+S2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJj
+ZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAAMDEAAAAAAAAAAAAASjEAAAAgAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAADwxAAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAA
+EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAA
+AEgAAABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8A
+AAAAAL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABE
+AAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8A
+bgAAAAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAw
+ADAAMAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEA
+bgB5AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAA
+AAAAUwBDAF8ANABhADYAYQA3AGIAMQA1AGMAOAAyAGQANAA1ADkAZgBhAGYANwBmAGUANwA1ADQA
+OABkAGEAOAA2AGEAYgBiAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAu
+ADAALgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwBGADkARABDADEA
+RQA3ADUARABGADEANwA0ADYAMwA3AEEANgA0ADQANAA0ADAAMQA3ADMAOQAyAEYANwA2AEYALgBk
+AGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcA
+aAB0ACAAQAAgACAAMgAwADIANAAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBz
+AAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfAEYA
+OQBEAEMAMQBFADcANQBEAEYAMQA3ADQANgAzADcAQQA2ADQANAA0ADQAMAAxADcAMwA5ADIARgA3
+ADYARgAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwA0AGEA
+NgBhADcAYgAxADUAYwA4ADIAZAA0ADUAOQBmAGEAZgA3AGYAZQA3ADUANAA4AGQAYQA4ADYAYQBi
+AGIAAAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAA
+OAAIAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAFwxAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
                 </property>
                 <property
                   dataType="System.String"
@@ -3179,23 +3396,23 @@ namespace SC_4cb629453c1644d792ce1105c5674446.Properties {
                       dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
   <msb:PropertyGroup>
-    <msb:Language>msBuild</msb:Language>
     <msb:CodeName>SC_4cb629453c1644d792ce1105c5674446</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_4cb629453c1644d792ce1105c5674446</msb:DisplayName>
-    <msb:ProjectId>{F531A7F6-B07B-4D5D-9FCF-9C30842F74CC}</msb:ProjectId>
+    <msb:ProjectId>{1491C904-3FB3-4AF2-B06D-10EA9E438001}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_4cb629453c1644d792ce1105c5674446.csproj" />
     <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
     <msb:File Include="Properties\Settings.settings" />
     <msb:File Include="Properties\AssemblyInfo.cs" />
     <msb:File Include="Properties\Resources.resx" />
-    <msb:File Include="main.cs" />
-    <msb:File Include="BufferWrapper.cs" />
     <msb:File Include="Properties\Settings.Designer.cs" />
-    <msb:File Include="ComponentWrapper.cs" />
   </msb:ItemGroup>
 </c:Project>]]></arrayElement>
                     <arrayElement
@@ -3249,7 +3466,93 @@ using System.Runtime.CompilerServices;
                     <arrayElement
                       dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                     <arrayElement
-                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{9469ca69-6728-4c26-8883-109786e2016e}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>SC_4cb629453c1644d792ce1105c5674446</RootNamespace><AssemblyName>SC_2752C790E11D47D7908F6A391AE4E986</AssemblyName><TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Compile Include="main.cs" /><Compile Include="BufferWrapper.cs" /><Compile Include="ComponentWrapper.cs" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><!-- This section defines VSTA properties that describe the host-changable project properties. --><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptComponent" GeneratedNamespace="SC_4cb629453c1644d792ce1105c5674446" IconIndex="0"></Host><ProjectClient><HostIdentifier>SSIS_SC160</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></arrayElement>
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9469ca69-6728-4c26-8883-109786e2016e}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_4cb629453c1644d792ce1105c5674446</RootNamespace>
+    <AssemblyName>SC_2752C790E11D47D7908F6A391AE4E986</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_4cb629453c1644d792ce1105c5674446" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC160</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
                   </arrayElements>
                 </property>
                 <property
@@ -3259,7 +3562,137 @@ using System.Runtime.CompilerServices;
                   name="BinaryCode"
                   state="cdata">
                   <arrayElements
-                    arrayElementCount="0" />
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_2752C790E11D47D7908F6A391AE4E986.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[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
+AAADAOEDAAABALoCAAABALoCAAABADsAAAACAIAAAAADAA0EAAAEAOEDAAABAA0EAAABAAYGAAAB
+AI8FAAABAI8FAAABALoCCQAoBAEAEQAoBAYAGQAoBAoAKQAoBBAAMQAoBBAAOQAoBBAAQQAoBBAA
+SQAoBBAAUQAoBBAAWQAoBBAAYQAoBBAAaQAoBAYAmQAoBAYAuQAoBBUAyQAoBAYAiQCjAgYAiQCu
+AgYA0QDaAh8A2QBFBSMAcQAoBCkAcQA5AzMAcQAxAwEA4QAoBBAAcQACBjkAcQBTBTkAiQAoBAYA
+2QAyBT0AiQAYBUQAkQAoBAYA8QBuAEoA8QAKBlEAoQAoBFcAwQAoBAYALgALANcALgATAOAALgAb
+AP8ALgAjAAgBLgArADEBLgAzADEBLgA7ADEBLgBDAAgBLgBLADcBLgBTADEBLgBbAE4BQwBjAJgB
+aQBzAP8AiQBzAP8A4wBrAJgBAQF7AJgBGwADAAEABwADAAgABQAAAEAAwAAAACcDxAAAABgEyAAA
+ANAAzQAAAGMF0gABAAYAAwABAAcABQACABEABwACABIACQABABMACQACABQACwAEgAAAAQAAAAAA
+AAAAAAAAAAAHAAAABAAAAAAAAAAAAAAAXwBDAAAAAAAQAAAAAAAAAAAAAABoAJkFAAAAABAAAAAA
+AAAAAAAAAGgAtgUAAAAABAAAAAAAAAAAAAAAXwBCAwAAAAAAAAAAAQAAAHkEAAAAAAAAAEludDMy
+AFNDXzI3NTJDNzkwRTExRDQ3RDc5MDhGNkEzOTFBRTRFOTg2ADxNb2R1bGU+AHNldF9JRABJbnB1
+dElEAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJv
+bUhhbmRsZQBJbnB1dE5hbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAVHlwZQBn
+ZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5n
+c0Jhc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVi
+dWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dz
+YWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0
+cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRy
+aWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25z
+QXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJp
+YnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBh
+bnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0
+RXhlY3V0ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFRvU3RyaW5nAGkAU3lzdGVt
+LkNvbXBvbmVudE1vZGVsAFNDXzI3NTJDNzkwRTExRDQ3RDc5MDhGNkEzOTFBRTRFOTg2LmRsbABz
+ZXRfSURfSXNOdWxsAFNldE51bGwAc2V0X0l0ZW0AU3lzdGVtAHJlc291cmNlTWFuAFNjcmlwdE1h
+aW4AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxl
+Y3Rpb24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBTdHJpbmdDb21wYXJpc29uAEN1bHR1cmVJ
+bmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAElucHV0MEJ1ZmZlcgBQaXBlbGluZUJ1ZmZlcgBT
+Y3JpcHRCdWZmZXIAZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdu
+b3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBT
+Q180Y2I2Mjk0NTNjMTY0NGQ3OTJjZTExMDVjNTY3NDQ0Ni5Qcm9wZXJ0aWVzLlJlc291cmNlcy5y
+ZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfNGNiNjI5NDUzYzE2NDRkNzkyY2UxMTA1YzU2NzQ0
+NDYuUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRl
+eGVzAFNldHRpbmdzAEVxdWFscwBDb25uZWN0aW9ucwBDb25jYXQAT2JqZWN0AEVuZE9mUm93c2V0
+AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBvbmVu
+dABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlwZWxp
+bmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQASW5wdXQwX1Byb2Nlc3NJbnB1dFJvdwBOZXh0Um93
+AGdldF9Bc3NlbWJseQAAABFBAFEASQAyADAAMgAyAF8AAICbSQBzAE4AdQBsAGwAIABwAHIAbwBw
+AGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4A
+IABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBu
+ACAAaQBuAHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADQAYwBiADYAMgA5ADQA
+NQAzAGMAMQA2ADQANABkADcAOQAyAGMAZQAxADEAMAA1AGMANQA2ADcANAA0ADQANgAuAFAAcgBv
+AHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAAAFdg/xB5lPRrJhJUwVif3lAAQg
+AQEIAyAAAQUgAQEREQQgAQEOBSABARFZAwcBCAMgAA4FAAIODg4JIAMBEj0dCBJBBSACAQgcAyAA
+AgYgAgIOEXUFIAEdCAgGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJECBggD
+BhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwEIAEBAgkgBAEIDhI9EkEFIAEBEkUEAAASUQQA
+ABJVBQABARJVBAAAEiADAAABAygADgMoAAIECAASUQQIABJVBAgAEiAIAQAIAAAAAAAeAQABAFQC
+FldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzRjYjYyOTQ1M2MxNjQ0ZDc5
+MmNlMTEwNWM1Njc0NDQ2AAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjQAAEkBABouTkVURnJh
+bWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdv
+cmsgNC43BAEAAAAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VS
+ZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGlj
+S2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJj
+ZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAAMDEAAAAAAAAAAAAASjEAAAAgAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAADwxAAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAA
+EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAA
+AEgAAABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8A
+AAAAAL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABE
+AAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8A
+bgAAAAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAw
+ADAAMAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEA
+bgB5AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAA
+AAAAUwBDAF8ANABjAGIANgAyADkANAA1ADMAYwAxADYANAA0AGQANwA5ADIAYwBlADEAMQAwADUA
+YwA1ADYANwA0ADQANAA2AAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAu
+ADAALgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwAyADcANQAyAEMA
+NwA5ADAARQAxADEARAA0ADcARAA3ADkAMAA4AEYANgBBADMAOQAxAEEARQA0AEUAOQA4ADYALgBk
+AGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcA
+aAB0ACAAQAAgACAAMgAwADIANAAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBz
+AAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfADIA
+NwA1ADIAQwA3ADkAMABFADEAMQBEADQANwBEADcAOQAwADgARgA2AEEAMwA5ADEAQQBFADQARQA5
+ADgANgAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwA0AGMA
+YgA2ADIAOQA0ADUAMwBjADEANgA0ADQAZAA3ADkAMgBjAGUAMQAxADAANQBjADUANgA3ADQANAA0
+ADYAAAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAA
+OAAIAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAFwxAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
                 </property>
                 <property
                   dataType="System.String"
@@ -3759,30 +4192,116 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                     <arrayElement
-                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{81cc3cf8-9ced-4cad-b3ae-0b9bdd8fcc14}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>SC_9b28f31979c7476988317079fe98542b</RootNamespace><AssemblyName>SC_8062737CDA9349F783DE6BA95C116059</AssemblyName><TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Compile Include="main.cs" /><Compile Include="BufferWrapper.cs" /><Compile Include="ComponentWrapper.cs" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><!-- This section defines VSTA properties that describe the host-changable project properties. --><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptComponent" GeneratedNamespace="SC_9b28f31979c7476988317079fe98542b" IconIndex="0"></Host><ProjectClient><HostIdentifier>SSIS_SC160</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></arrayElement>
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{81cc3cf8-9ced-4cad-b3ae-0b9bdd8fcc14}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_9b28f31979c7476988317079fe98542b</RootNamespace>
+    <AssemblyName>SC_8062737CDA9349F783DE6BA95C116059</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_9b28f31979c7476988317079fe98542b" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC160</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[Project]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
   <msb:PropertyGroup>
-    <msb:Language>msBuild</msb:Language>
     <msb:CodeName>SC_9b28f31979c7476988317079fe98542b</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_9b28f31979c7476988317079fe98542b</msb:DisplayName>
-    <msb:ProjectId>{BD8E07D7-27F2-40C9-AFF2-02C20FD1AEB7}</msb:ProjectId>
+    <msb:ProjectId>{47E557E7-543B-40D7-B849-C2EC2F74B5FF}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_9b28f31979c7476988317079fe98542b.csproj" />
     <msb:File Include="Properties\Settings.settings" />
     <msb:File Include="Properties\AssemblyInfo.cs" />
-    <msb:File Include="Properties\Resources.resx" />
-    <msb:File Include="Properties\Resources.Designer.cs" />
     <msb:File Include="main.cs" />
     <msb:File Include="BufferWrapper.cs" />
-    <msb:File Include="Properties\Settings.Designer.cs" />
     <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
   </msb:ItemGroup>
 </c:Project>]]></arrayElement>
                     <arrayElement
@@ -3912,7 +4431,137 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                   name="BinaryCode"
                   state="cdata">
                   <arrayElements
-                    arrayElementCount="0" />
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_8062737CDA9349F783DE6BA95C116059.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[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
+AAADAOEDAAABALoCAAABALoCAAABADsAAAACAIAAAAADAA0EAAAEAOEDAAABAA0EAAABAAYGAAAB
+AI8FAAABAI8FAAABALoCCQAoBAEAEQAoBAYAGQAoBAoAKQAoBBAAMQAoBBAAOQAoBBAAQQAoBBAA
+SQAoBBAAUQAoBBAAWQAoBBAAYQAoBBAAaQAoBAYAmQAoBAYAuQAoBBUAyQAoBAYAiQCjAgYAiQCu
+AgYA0QDaAh8A2QBFBSMAcQAoBCkAcQA5AzMAcQAxAwEA4QAoBBAAcQACBjkAcQBTBTkAiQAoBAYA
+2QAyBT0AiQAYBUQAkQAoBAYA8QBuAEoA8QAKBlEAoQAoBFcAwQAoBAYALgALANcALgATAOAALgAb
+AP8ALgAjAAgBLgArADEBLgAzADEBLgA7ADEBLgBDAAgBLgBLADcBLgBTADEBLgBbAE4BQwBjAJgB
+aQBzAP8AiQBzAP8A4wBrAJgBAQF7AJgBGwADAAEABwADAAgABQAAAEAAwAAAACcDxAAAABgEyAAA
+ANAAzQAAAGMF0gABAAYAAwABAAcABQACABEABwACABIACQABABMACQACABQACwAEgAAAAQAAAAAA
+AAAAAAAAAAAHAAAABAAAAAAAAAAAAAAAXwBDAAAAAAAQAAAAAAAAAAAAAABoAJkFAAAAABAAAAAA
+AAAAAAAAAGgAtgUAAAAABAAAAAAAAAAAAAAAXwBCAwAAAAAAAAAAAQAAAHkEAAAAAAAAAEludDMy
+AFNDXzgwNjI3MzdDREE5MzQ5Rjc4M0RFNkJBOTVDMTE2MDU5ADxNb2R1bGU+AHNldF9JRABJbnB1
+dElEAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJv
+bUhhbmRsZQBJbnB1dE5hbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAVHlwZQBn
+ZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5n
+c0Jhc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVi
+dWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dz
+YWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0
+cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRy
+aWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25z
+QXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJp
+YnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBh
+bnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0
+RXhlY3V0ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFRvU3RyaW5nAGkAU3lzdGVt
+LkNvbXBvbmVudE1vZGVsAFNDXzgwNjI3MzdDREE5MzQ5Rjc4M0RFNkJBOTVDMTE2MDU5LmRsbABz
+ZXRfSURfSXNOdWxsAFNldE51bGwAc2V0X0l0ZW0AU3lzdGVtAHJlc291cmNlTWFuAFNjcmlwdE1h
+aW4AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxl
+Y3Rpb24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBTdHJpbmdDb21wYXJpc29uAEN1bHR1cmVJ
+bmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAElucHV0MEJ1ZmZlcgBQaXBlbGluZUJ1ZmZlcgBT
+Y3JpcHRCdWZmZXIAZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdu
+b3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBT
+Q185YjI4ZjMxOTc5Yzc0NzY5ODgzMTcwNzlmZTk4NTQyYi5Qcm9wZXJ0aWVzLlJlc291cmNlcy5y
+ZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfOWIyOGYzMTk3OWM3NDc2OTg4MzE3MDc5ZmU5ODU0
+MmIuUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRl
+eGVzAFNldHRpbmdzAEVxdWFscwBDb25uZWN0aW9ucwBDb25jYXQAT2JqZWN0AEVuZE9mUm93c2V0
+AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBvbmVu
+dABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlwZWxp
+bmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQASW5wdXQwX1Byb2Nlc3NJbnB1dFJvdwBOZXh0Um93
+AGdldF9Bc3NlbWJseQAAABFBAFEASQAyADAAMgAzAF8AAICbSQBzAE4AdQBsAGwAIABwAHIAbwBw
+AGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4A
+IABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBu
+ACAAaQBuAHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADkAYgAyADgAZgAzADEA
+OQA3ADkAYwA3ADQANwA2ADkAOAA4ADMAMQA3ADAANwA5AGYAZQA5ADgANQA0ADIAYgAuAFAAcgBv
+AHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAACBhIglZ/HxTYKHpXdJoM1uAAQg
+AQEIAyAAAQUgAQEREQQgAQEOBSABARFZAwcBCAMgAA4FAAIODg4JIAMBEj0dCBJBBSACAQgcAyAA
+AgYgAgIOEXUFIAEdCAgGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJECBggD
+BhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwEIAEBAgkgBAEIDhI9EkEFIAEBEkUEAAASUQQA
+ABJVBQABARJVBAAAEiADAAABAygADgMoAAIECAASUQQIABJVBAgAEiAIAQAIAAAAAAAeAQABAFQC
+FldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzliMjhmMzE5NzljNzQ3Njk4
+ODMxNzA3OWZlOTg1NDJiAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjQAAEkBABouTkVURnJh
+bWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdv
+cmsgNC43BAEAAAAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VS
+ZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGlj
+S2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJj
+ZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAAMDEAAAAAAAAAAAAASjEAAAAgAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAADwxAAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAA
+EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAA
+AEgAAABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8A
+AAAAAL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABE
+AAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8A
+bgAAAAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAw
+ADAAMAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEA
+bgB5AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAA
+AAAAUwBDAF8AOQBiADIAOABmADMAMQA5ADcAOQBjADcANAA3ADYAOQA4ADgAMwAxADcAMAA3ADkA
+ZgBlADkAOAA1ADQAMgBiAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAu
+ADAALgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwA4ADAANgAyADcA
+MwA3AEMARABBADkAMwA0ADkARgA3ADgAMwBEAEUANgBCAEEAOQA1AEMAMQAxADYAMAA1ADkALgBk
+AGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcA
+aAB0ACAAQAAgACAAMgAwADIANAAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBz
+AAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfADgA
+MAA2ADIANwAzADcAQwBEAEEAOQAzADQAOQBGADcAOAAzAEQARQA2AEIAQQA5ADUAQwAxADEANgAw
+ADUAOQAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwA5AGIA
+MgA4AGYAMwAxADkANwA5AGMANwA0ADcANgA5ADgAOAAzADEANwAwADcAOQBmAGUAOQA4ADUANAAy
+AGIAAAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAA
+OAAIAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAFwxAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
                 </property>
                 <property
                   dataType="System.String"
@@ -4006,12 +4655,12 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
               </inputs>
               <outputs>
                 <output
-                  refId="Package\source to stage AirQuality\Conditional Split.Outputs[Extract succes]"
+                  refId="Package\source to stage AirQuality\Conditional Split.Outputs[Extract success]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Extract succes"
+                  name="Extract success"
                   synchronousInputId="Package\source to stage AirQuality\Conditional Split.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -4064,6 +4713,225 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       refId="Package\source to stage AirQuality\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\source to stage AirQuality\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\source to stage AirQuality\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\source to stage AirQuality\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\source to stage AirQuality\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\source to stage AirQuality\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Derived Column.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\source to stage AirQuality\Derived Column.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\source to stage AirQuality\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\source to stage AirQuality\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\source to stage AirQuality\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\source to stage AirQuality\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\source to stage AirQuality\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\source to stage AirQuality\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\source to stage AirQuality\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\source to stage AirQuality\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Derived Column 1.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\source to stage AirQuality\Derived Column 1.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">2</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">2</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\source to stage AirQuality\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\source to stage AirQuality\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\source to stage AirQuality\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\source to stage AirQuality\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\source to stage AirQuality\Derived Column 1 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\source to stage AirQuality\Derived Column 1 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\source to stage AirQuality\Derived Column 1 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\source to stage AirQuality\Derived Column 1 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Derived Column 1 1.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\source to stage AirQuality\Derived Column 1 1.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">3</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">3</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\source to stage AirQuality\Derived Column 1 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\source to stage AirQuality\Derived Column 1 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Derived Column 1 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\source to stage AirQuality\Derived Column 1 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Derived Column 1 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\source to stage AirQuality\Derived Column 1 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4311,8 +5179,8 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
               <connections>
                 <connection
                   refId="Package\source to stage AirQuality\stgStateAQI.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-OST9FTB.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OST9FTB.Stage]"
+                  connectionManagerID="Package.ConnectionManagers[PHUC.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[PHUC.Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4401,6 +5269,19 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       cachedName="Last Updated"
                       externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Last Updated]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[SourceID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4457,6 +5338,15 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
                       dataType="dbTimeStamp"
                       name="Last Updated" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      dataType="i4"
+                      name="SourceID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4494,16 +5384,16 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
               version="1">
               <inputs>
                 <input
-                  refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4]"
+                  refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3]"
                   hasSideEffects="true"
-                  name="Union All Input 4">
+                  name="Union All Input 3">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[State Name]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[State Name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="State Name"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[State Name]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[State Name]">
                       <properties>
                         <property
                           containsID="true"
@@ -4513,11 +5403,11 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[county Name]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[county Name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="county Name"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[county Name]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[county Name]">
                       <properties>
                         <property
                           containsID="true"
@@ -4527,10 +5417,10 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[State Code]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[State Code]"
                       cachedDataType="ui2"
                       cachedName="State Code"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[State Code]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[State Code]">
                       <properties>
                         <property
                           containsID="true"
@@ -4540,10 +5430,10 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[County Code]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[County Code]"
                       cachedDataType="ui2"
                       cachedName="County Code"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[County Code]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[County Code]">
                       <properties>
                         <property
                           containsID="true"
@@ -4553,10 +5443,10 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[Date]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[Date]"
                       cachedDataType="date"
                       cachedName="Date"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Date]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Date]">
                       <properties>
                         <property
                           containsID="true"
@@ -4566,10 +5456,10 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[AQI]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[AQI]"
                       cachedDataType="i2"
                       cachedName="AQI"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[AQI]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[AQI]">
                       <properties>
                         <property
                           containsID="true"
@@ -4579,11 +5469,11 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[Category]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[Category]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Category"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Category]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Category]">
                       <properties>
                         <property
                           containsID="true"
@@ -4593,11 +5483,11 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[Defining Parameter]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[Defining Parameter]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Defining Parameter"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Defining Parameter]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Defining Parameter]">
                       <properties>
                         <property
                           containsID="true"
@@ -4607,11 +5497,11 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[Defining Site]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[Defining Site]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Defining Site"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Defining Site]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Defining Site]">
                       <properties>
                         <property
                           containsID="true"
@@ -4621,10 +5511,10 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[Number of Sites Reporting]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[Number of Sites Reporting]"
                       cachedDataType="ui2"
                       cachedName="Number of Sites Reporting"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]">
                       <properties>
                         <property
                           containsID="true"
@@ -4634,10 +5524,10 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[Created]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[Created]"
                       cachedDataType="date"
                       cachedName="Created"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Created]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Created]">
                       <properties>
                         <property
                           containsID="true"
@@ -4647,16 +5537,43 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4].Columns[Last Updated]"
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[Last Updated]"
                       cachedDataType="date"
                       cachedName="Last Updated"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Last Updated]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Last Updated]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Last Updated]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ID"
+                      lineageId="Package\source to stage AirQuality\Add Source ID 2022.Outputs[Output 0].Columns[ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      lineageId="Package\source to stage AirQuality\Derived Column 1.Outputs[Derived Column Output].Columns[SourceID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[SourceID]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -4672,7 +5589,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="State Name"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[State Name]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[State Name]">
                       <properties>
                         <property
                           containsID="true"
@@ -4686,7 +5603,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="county Name"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[county Name]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[county Name]">
                       <properties>
                         <property
                           containsID="true"
@@ -4699,7 +5616,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 1].Columns[State Code]"
                       cachedDataType="ui2"
                       cachedName="State Code"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[State Code]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[State Code]">
                       <properties>
                         <property
                           containsID="true"
@@ -4712,7 +5629,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 1].Columns[County Code]"
                       cachedDataType="ui2"
                       cachedName="County Code"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[County Code]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[County Code]">
                       <properties>
                         <property
                           containsID="true"
@@ -4725,7 +5642,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 1].Columns[Date]"
                       cachedDataType="date"
                       cachedName="Date"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Date]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Date]">
                       <properties>
                         <property
                           containsID="true"
@@ -4738,7 +5655,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 1].Columns[AQI]"
                       cachedDataType="i2"
                       cachedName="AQI"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[AQI]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[AQI]">
                       <properties>
                         <property
                           containsID="true"
@@ -4752,7 +5669,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Category"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Category]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Category]">
                       <properties>
                         <property
                           containsID="true"
@@ -4766,7 +5683,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Defining Parameter"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Defining Parameter]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Defining Parameter]">
                       <properties>
                         <property
                           containsID="true"
@@ -4780,7 +5697,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Defining Site"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Defining Site]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Defining Site]">
                       <properties>
                         <property
                           containsID="true"
@@ -4793,7 +5710,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 1].Columns[Number of Sites Reporting]"
                       cachedDataType="ui2"
                       cachedName="Number of Sites Reporting"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]">
                       <properties>
                         <property
                           containsID="true"
@@ -4806,7 +5723,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 1].Columns[Created]"
                       cachedDataType="date"
                       cachedName="Created"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Created]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Created]">
                       <properties>
                         <property
                           containsID="true"
@@ -4819,13 +5736,40 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 1].Columns[Last Updated]"
                       cachedDataType="date"
                       cachedName="Last Updated"
-                      lineageId="Package\source to stage AirQuality\10_state_aqi_2022.Outputs[Flat File Source Output].Columns[Last Updated]">
+                      lineageId="Package\source to stage AirQuality\10_state_aqi_2021.Outputs[Flat File Source Output].Columns[Last Updated]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Last Updated]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 1].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ID"
+                      lineageId="Package\source to stage AirQuality\Add Source ID 2021.Outputs[Output 0].Columns[ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 1].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      lineageId="Package\source to stage AirQuality\Derived Column.Outputs[Derived Column Output].Columns[SourceID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[SourceID]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -4997,14 +5941,41 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                           name="OutputColumnLineageID">#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Last Updated]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 2].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ID"
+                      lineageId="Package\source to stage AirQuality\Add Source ID 2023.Outputs[Output 0].Columns[ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 2].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      lineageId="Package\source to stage AirQuality\Derived Column 1 1.Outputs[Derived Column Output].Columns[SourceID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[SourceID]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3]"
+                  refId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4]"
                   dangling="true"
                   hasSideEffects="true"
-                  name="Union All Input 3">
+                  name="Union All Input 4">
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -5078,6 +6049,17 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       dataType="date"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Last Updated]"
                       name="Last Updated" />
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[ID]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[SourceID]"
+                      dataType="i4"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[SourceID]"
+                      name="SourceID" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -5091,10 +6073,25 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
               name="Conditional Split Default Output"
               startId="Package\source to stage AirQuality\Conditional Split.Outputs[Conditional Split Default Output]" />
             <path
+              refId="Package\source to stage AirQuality.Paths[Derived Column Output]"
+              endId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\source to stage AirQuality\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\source to stage AirQuality.Paths[Derived Column Output1]"
+              endId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\source to stage AirQuality\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\source to stage AirQuality.Paths[Derived Column Output2]"
+              endId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\source to stage AirQuality\Derived Column 1 1.Outputs[Derived Column Output]" />
+            <path
               refId="Package\source to stage AirQuality.Paths[Extract succes]"
               endId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input]"
               name="Extract succes"
-              startId="Package\source to stage AirQuality\Conditional Split.Outputs[Extract succes]" />
+              startId="Package\source to stage AirQuality\Conditional Split.Outputs[Extract success]" />
             <path
               refId="Package\source to stage AirQuality.Paths[Flat File Source Output]"
               endId="Package\source to stage AirQuality\Add Source ID 2021.Inputs[Input 0]"
@@ -5112,17 +6109,17 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
               startId="Package\source to stage AirQuality\10_state_aqi_2023.Outputs[Flat File Source Output]" />
             <path
               refId="Package\source to stage AirQuality.Paths[Output 0]"
-              endId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 4]"
+              endId="Package\source to stage AirQuality\Derived Column.Inputs[Derived Column Input]"
               name="Output 0"
               startId="Package\source to stage AirQuality\Add Source ID 2021.Outputs[Output 0]" />
             <path
               refId="Package\source to stage AirQuality.Paths[Output 01]"
-              endId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 1]"
+              endId="Package\source to stage AirQuality\Derived Column 1.Inputs[Derived Column Input]"
               name="Output 0"
               startId="Package\source to stage AirQuality\Add Source ID 2022.Outputs[Output 0]" />
             <path
               refId="Package\source to stage AirQuality.Paths[Output 02]"
-              endId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 2]"
+              endId="Package\source to stage AirQuality\Derived Column 1 1.Inputs[Derived Column Input]"
               name="Output 0"
               startId="Package\source to stage AirQuality\Add Source ID 2023.Outputs[Output 0]" />
             <path
@@ -5151,6 +6148,108 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\source to stage USCounty\Derived state_code, county_code"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived state_code, county_code"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\source to stage USCounty\Derived state_code, county_code.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\source to stage USCounty\Derived state_code, county_code.Inputs[Derived Column Input].Columns[county_fips]"
+                      cachedDataType="i4"
+                      cachedName="county_fips"
+                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[county_fips]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\source to stage USCounty\Derived state_code, county_code.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Output].Columns[state_code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Output].Columns[state_code]"
+                      name="state_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[county_fips]} / 1000</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">county_fips / 1000</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Output].Columns[county_code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Output].Columns[county_code]"
+                      name="county_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[county_fips]} % 1000</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">county_fips % 1000</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\source to stage USCounty\Derived state_code, county_code.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\source to stage USCounty\uscounty"
               componentClassID="Microsoft.FlatFileSource"
@@ -5458,7 +6557,7 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[stgUSCounty]</property>
+                  name="OpenRowset">[stgUSCounty]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -5501,8 +6600,8 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
               <connections>
                 <connection
                   refId="Package\source to stage USCounty\uscounty stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-OST9FTB.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-OST9FTB.Stage]"
+                  connectionManagerID="Package.ConnectionManagers[PHUC.Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[PHUC.Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5573,6 +6672,18 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       cachedName="population"
                       externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[population]"
                       lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[population]" />
+                    <inputColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[state_code]"
+                      cachedDataType="i4"
+                      cachedName="state_code"
+                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[state_code]"
+                      lineageId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Output].Columns[state_code]" />
+                    <inputColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[county_code]"
+                      cachedDataType="i4"
+                      cachedName="county_code"
+                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county_code]"
+                      lineageId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Output].Columns[county_code]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5617,6 +6728,14 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
                       refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[population]"
                       dataType="i4"
                       name="population" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[state_code]"
+                      dataType="i4"
+                      name="state_code" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county_code]"
+                      dataType="i4"
+                      name="county_code" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5648,8 +6767,13 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
           </components>
           <paths>
             <path
-              refId="Package\source to stage USCounty.Paths[Flat File Source Output]"
+              refId="Package\source to stage USCounty.Paths[Derived Column Output]"
               endId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\source to stage USCounty.Paths[Flat File Source Output]"
+              endId="Package\source to stage USCounty\Derived state_code, county_code.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output]" />
           </paths>
@@ -5998,181 +7122,71 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="120,41.6"
+          Id="Package\source to stage AirQuality\Union All"
+          TopLeft="352.400000745058,301.564705653782" />
+        <NodeLayout
           Size="150.4,41.6"
           Id="Package\source to stage AirQuality\errorExtractFile"
           TopLeft="623.571429898849,439.623529100748" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\source to stage AirQuality\Conditional Split"
+          TopLeft="337.485714954746,390.847058543347" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\source to stage AirQuality\stgStateAQI"
+          TopLeft="345.285715018608,490.788234936851" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\source to stage AirQuality\10_state_aqi_2022"
+          TopLeft="327.57142927087,40.2941175652829" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\source to stage AirQuality\Derived Column 1 1"
+          TopLeft="580.000001234668,303.32941166081" />
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\source to stage AirQuality\Add Source ID 2021"
+          TopLeft="94.2857144864236,174.858823538125" />
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\source to stage AirQuality\Add Source ID 2023"
+          TopLeft="569.285715497574,169.505882366347" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\source to stage AirQuality\Derived Column 1"
+          TopLeft="332.77142915379,207.235293935997" />
         <NodeLayout
           Size="168,41.6"
           Id="Package\source to stage AirQuality\10_state_aqi_2023"
           TopLeft="568.571429781768,94.0588234469656" />
         <NodeLayout
-          Size="168,41.6"
-          Id="Package\source to stage AirQuality\10_state_aqi_2022"
-          TopLeft="314.714286386358,41.0588234469655" />
-        <NodeLayout
-          Size="120,41.6"
-          Id="Package\source to stage AirQuality\Union All"
-          TopLeft="351.685715029252,235.035293947392" />
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\source to stage AirQuality\Conditional Split"
-          TopLeft="339.628572102165,342.67058799734" />
+          Size="152.8,41.6"
+          Id="Package\source to stage AirQuality\Derived Column"
+          TopLeft="102.914285832887,301.882352764219" />
         <NodeLayout
           Size="168,41.6"
           Id="Package\source to stage AirQuality\10_state_aqi_2021"
           TopLeft="100.71428592868,94.0588234469656" />
         <NodeLayout
-          Size="135.2,41.6"
-          Id="Package\source to stage AirQuality\stgStateAQI"
-          TopLeft="346.000000734414,451.023529089353" />
-        <EdgeLayout
-          Id="Package\source to stage AirQuality.Paths[Union All Output 1]"
-          TopLeft="414.257143565708,276.635293947392">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66.0352940499472"
-              Start="0,0"
-              End="0,58.5352940499472">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,58.5352940499472" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\source to stage AirQuality.Paths[Extract succes]"
-          TopLeft="415.214286418289,384.27058799734">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66.7529410920135"
-              Start="0,0"
-              End="0,59.2529410920135">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.2529410920135" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-31.942578125,24.9155330460068,63.88515625,9.421875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\source to stage AirQuality.Paths[Conditional Split Default Output]"
-          TopLeft="441.228572102165,384.27058799734">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="257.542857796684,55.3529411034079"
-              Start="0,0"
-              End="257.542857796684,47.8529411034079">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.4818099250764" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.4818099250764"
-                    Point2="0,22.4818099250764"
-                    Point3="4,22.4818099250764" />
-                  <mssgle:LineSegment
-                    End="253.542857796684,22.4818099250764" />
-                  <mssgle:CubicBezierSegment
-                    Point1="253.542857796684,22.4818099250764"
-                    Point2="257.542857796684,22.4818099250764"
-                    Point3="257.542857796684,26.4818099250764" />
-                  <mssgle:LineSegment
-                    End="257.542857796684,47.8529411034079" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="58.157522648342,27.4818099250764,141.2278125,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\source to stage AirQuality\Add Source ID 2021"
-          TopLeft="104.285714507711,236.035294072737" />
-        <EdgeLayout
-          Id="Package\source to stage AirQuality.Paths[Flat File Source Output]"
-          TopLeft="187.700000218196,135.658823446966">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,100.376470625772"
-              Start="0,0"
-              End="0,92.8764706257716">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,92.8764706257716" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\source to stage AirQuality.Paths[Output 0]"
-          TopLeft="277.085714507711,256.335294010065">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="74.6000005215408,0"
-              Start="0,0"
-              End="67.1000005215408,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="67.1000005215408,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="172.8,41.6"
           Id="Package\source to stage AirQuality\Add Source ID 2022"
-          TopLeft="312.142857807328,131.482352946539" />
+          TopLeft="328.571429270872,131.482352946539" />
         <EdgeLayout
-          Id="Package\source to stage AirQuality.Paths[Flat File Source Output1]"
-          TopLeft="398.628572096843,82.6588234469655">
+          Id="Package\source to stage AirQuality.Paths[Output 02]"
+          TopLeft="658.442858366121,211.105882366347">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.8235294995732"
+              EndConnector="0,92.2235292944632"
               Start="0,0"
-              End="0,41.3235294995732">
+              End="0,84.7235292944632">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.3235294995732" />
+                    End="0,84.7235292944632" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6183,18 +7197,18 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
         </EdgeLayout>
         <EdgeLayout
           Id="Package\source to stage AirQuality.Paths[Output 01]"
-          TopLeft="395.780953084956,173.082352946539">
+          TopLeft="414.471429212331,173.082352946539">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.9529410008533"
+              EndConnector="0,34.1529409894583"
               Start="0,0"
-              End="0,54.4529410008533">
+              End="0,26.6529409894583">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.4529410008533" />
+                    End="0,26.6529409894583" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6203,24 +7217,20 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\source to stage AirQuality\Add Source ID 2023"
-          TopLeft="568.571429781768,234.505882309372" />
         <EdgeLayout
-          Id="Package\source to stage AirQuality.Paths[Flat File Source Output2]"
-          TopLeft="653.771429781768,135.658823446966">
+          Id="Package\source to stage AirQuality.Paths[Output 0]"
+          TopLeft="180.000000159655,216.458823538125">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,98.8470588624063"
+              EndConnector="0,85.4235292260935"
               Start="0,0"
-              End="0,91.3470588624063">
+              End="0,77.9235292260935">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,91.3470588624063" />
+                    End="0,77.9235292260935" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6230,19 +7240,211 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\source to stage AirQuality.Paths[Output 02]"
-          TopLeft="568.571429781768,255.570588128382">
+          Id="Package\source to stage AirQuality.Paths[Flat File Source Output2]"
+          TopLeft="654.128572639671,135.658823446966">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-96.8857147525159,0"
+              EndConnector="0,33.8470589193814"
               Start="0,0"
-              End="-89.3857147525159,0">
+              End="0,26.3470589193814">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-89.3857147525159,0" />
+                    End="0,26.3470589193814" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage AirQuality.Paths[Flat File Source Output1]"
+          TopLeft="413.271429270871,81.8941175652829">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.5882353812561"
+              Start="0,0"
+              End="0,42.0882353812561">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.0882353812561" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage AirQuality.Paths[Flat File Source Output]"
+          TopLeft="182.700000207552,135.658823446966">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.2000000911595"
+              Start="0,0"
+              End="0,31.7000000911595">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.7000000911595" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage AirQuality.Paths[Extract succes]"
+          TopLeft="413.785714986677,432.447058543347">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.3411763935039"
+              Start="0,0"
+              End="0,50.8411763935039">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.8411763935039" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-34.172578125,20.709650696752,68.34515625,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage AirQuality.Paths[Derived Column Output2]"
+          TopLeft="580.000001234668,323.247058657296">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-107.600000489609,0"
+              Start="0,0"
+              End="-100.100000489609,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-100.100000489609,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage AirQuality.Paths[Derived Column Output1]"
+          TopLeft="255.714285832887,322.523529209">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="96.6857149121716,0"
+              Start="0,0"
+              End="89.1857149121716,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="89.1857149121716,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage AirQuality.Paths[Derived Column Output]"
+          TopLeft="413.185714949424,248.835293935997">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.7294117177851"
+              Start="0,0"
+              End="0,45.2294117177851">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.2294117177851" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage AirQuality.Paths[Conditional Split Default Output]"
+          TopLeft="491.885714954746,411.647058543347">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="131.685714944103,48.7764705574012"
+              Start="0,0"
+              End="124.185714944103,48.7764705574012">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="61.8428574720514,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="61.8428574720514,0"
+                    Point2="65.8428574720514,0"
+                    Point3="65.8428574720514,4" />
+                  <mssgle:LineSegment
+                    End="65.8428574720514,44.7764705574012" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.8428574720514,44.7764705574012"
+                    Point2="65.8428574720514,48.7764705574012"
+                    Point3="69.8428574720514,48.7764705574012" />
+                  <mssgle:LineSegment
+                    End="124.185714944103,48.7764705574012" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-4.77104877794864,-17.658203125,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage AirQuality.Paths[Union All Output 1]"
+          TopLeft="413.542857849902,343.164705653782">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.6823528895644"
+              Start="0,0"
+              End="0,40.1823528895644">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.1823528895644" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6271,29 +7473,55 @@ namespace SC_9b28f31979c7476988317079fe98542b.Properties {
     design-time-name="Package\source to stage USCounty">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\source to stage USCounty\uscounty stage"
+          TopLeft="478.406586289944,315.276013658961" />
         <NodeLayout
           Size="120.8,41.6"
           Id="Package\source to stage USCounty\uscounty"
           TopLeft="498.999992564321,140.999997898936" />
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\source to stage USCounty\uscounty stage"
-          TopLeft="477.692300574138,296.923072498578" />
+          Size="235.2,41.6"
+          Id="Package\source to stage USCounty\Derived state_code, county_code"
+          TopLeft="442.857143799869,226.352940978063" />
         <EdgeLayout
           Id="Package\source to stage USCounty.Paths[Flat File Source Output]"
-          TopLeft="555.946146569229,182.599997898936">
+          TopLeft="559.928568182095,182.599997898936">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,114.323074599642"
+              EndConnector="0,43.7529430791275"
               Start="0,0"
-              End="0,106.823074599642">
+              End="0,36.2529430791275">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,106.823074599642" />
+                    End="0,36.2529430791275" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage USCounty.Paths[Derived Column Output]"
+          TopLeft="556.831865044907,267.952940978064">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.323072680898"
+              Start="0,0"
+              End="0,39.823072680898">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.823072680898" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
