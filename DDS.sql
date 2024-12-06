@@ -2,14 +2,8 @@
 go
 use DDS;
 go
-create table dimState (
-	StateID_SK int primary key,
-	StateName nvarchar(255),
-    StateCode int
-)
-go
 
-create table dimCounty (
+create table dimGeography (
 	CountyID_SK int primary key,
 	CountyName nvarchar(255),
     CountyAscii nvarchar(255),
@@ -17,7 +11,10 @@ create table dimCounty (
     CountyCode int, 
     Lat float,
     Lng float,
-    PopulationCounty int
+    PopulationCounty int,
+	StateID_SK int,
+	StateName nvarchar(255),
+    StateCode int
 )
 go
 
@@ -32,18 +29,15 @@ create table dimTime (
 go
 
 create table factAnalysis (
-	StateID_SK int,
 	CountyID_SK int,
 	TimeID_SK int,
     AQI int,
     Category nvarchar(255),
-	foreign key (StateID_SK) references dimState (StateID_SK),
-	foreign key (CountyID_SK) references dimCounty (CountyID_SK),
+	foreign key (CountyID_SK) references dimGeography (CountyID_SK),
 	foreign key (TimeID_SK) references dimTime (TimeID_SK)
 )
 go
 
-drop table factAnalysis1;
 drop table dimState;
 drop table dimCounty;
 drop table dimTime;

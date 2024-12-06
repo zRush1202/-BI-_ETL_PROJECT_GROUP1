@@ -31,13 +31,18 @@ create table CountyNDS
     CONSTRAINT FK_CountyNDS_StateNDS FOREIGN KEY (StateID_SK) REFERENCES StateNDS(StateID_SK)
 )
 
+create table AQCategoryNDS (
+	CategoryID int identity(1,1) primary key,
+	CategoryName nvarchar(255)
+)
+
 create table AirQualityNDS
 (
     AQID_SK int identity(1,1) primary key,
     AQID_NK nvarchar(255),
     DateAirQuality datetime,
     AQI int,
-    Category nvarchar(255) check (Category in ('Good', 'Moderate', 'Unhealthy for Sensitive Groups', 'Unhealthy', 'Very Unhealthy', 'Hazardous')),
+    CategoryID int,
     DefiningParameter nvarchar(255),
     DefiningSite nvarchar(255),
     NumberOfSitesReporting int,
@@ -48,5 +53,11 @@ create table AirQualityNDS
     CONSTRAINT FK_AirQualityNDS_CountyNDS FOREIGN KEY (CountyID_SK) REFERENCES CountyNDS(CountyID_SK)
 )
 
-
-
+INSERT INTO AQCategoryNDS (CategoryName)
+VALUES 
+('Good'),
+('Moderate'),
+('Unhealthy for Sensitive Groups'),
+('Unhealthy'),
+('Very Unhealthy'),
+('Hazardous');
