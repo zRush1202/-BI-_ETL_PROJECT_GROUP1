@@ -15,7 +15,8 @@ create table stgAirQuality (
 	stgDefiSite nvarchar(255),
 	stgNoSR int, 
 	stgCreated datetime,
-	stgLastUpdated datetime
+	stgLastUpdated datetime,
+	SourceID int,
 );
 
 select * from stgAirQuality;
@@ -32,7 +33,9 @@ create table stgUSCounty (
 	stgStateName nvarchar(255),
 	stgLat float,
 	stgLng float, 
-	stgPopulation bigint
+	stgPopulation bigint,
+	state_code int,
+	county_code int,
 );
 
 select * from stgUSCounty where stgUSCID = 1;
