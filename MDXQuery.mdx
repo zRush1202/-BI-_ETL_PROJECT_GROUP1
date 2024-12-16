@@ -1,0 +1,239 @@
+﻿//1
+select
+	nonempty(crossjoin([Dim Geography].[Hierarchy].[State ID SK],{[Measures].[MinAQI],[Measures].[MaxAQI]})) on rows,
+	nonempty(crossjoin([Dim Time].[Hierarchy].[Year],[Dim Time].[Quarter].[Quarter])) on columns
+from [Cube_DDSAirQuality];
+
+
+//2
+WITH 
+-- Tính giá trị trung bình (Mean AQI) cho từng quý trong năm
+MEMBER [Measures].[MeanAQI] AS 
+	([Measures].[AQI]/[Measures].[CountAQI])
+
+-- Tính độ lệch chuẩn (Standard Deviation) cho từng quý trong năm
+MEMBER [Measures].[StdDevAQI] AS 
+    StDev(
+        [Dim Time].[Hierarchy].CurrentMember.Children,
+        [Measures].[MeanAQI]
+    )
+
+SELECT 
+    {[Measures].[MeanAQI], [Measures].[StdDevAQI]} ON COLUMNS,
+    [Dim Geography].[State ID SK].[State ID SK] * 
+    [Dim Time].[Hierarchy].[Year] * 
+    [Dim Time].[Quarter].[Quarter] ON ROWS
+FROM [Cube_DDSAirQuality]
+
+
+//3
+//C1
+WITH 
+-- Số ngày có chất lượng không khí "bad" (category ID 5 hoặc 6)
+MEMBER [Measures].[DaysWithBadAQI] AS
+    COUNT(
+        FILTER(
+            [Dim Time].[Date].[Date].MEMBERS,
+            ([Measures].[AQI], [Dim AQ Category].[Category ID].&[5]) > 0
+            OR
+            ([Measures].[AQI], [Dim AQ Category].[Category ID].&[6]) > 0
+        )
+    )
+
+-- Giá trị trung bình AQI cho các ngày "bad" bằng cách tính tổng AQI chia cho CountAQI
+MEMBER [Measures].[MeanAQIForBadDays] AS
+    IIF(
+        [Measures].[CountAQI] > 0,
+        [Measures].[AQI] / [Measures].[CountAQI],
+        NULL
+    )
+
+SELECT 
+    {[Measures].[DaysWithBadAQI], [Measures].[MeanAQIForBadDays]} ON COLUMNS,
+    NONEMPTYCROSSJOIN(
+        [Dim Geography].[State Name].[State Name].MEMBERS AS 'State Name',
+        [Dim Geography].[County Name].[County Name].MEMBERS AS 'State Name'
+    ) ON ROWS
+FROM 
+    [Cube_DDSAirQuality]
+WHERE 
+    {[Dim AQ Category].[Category ID].&[5], [Dim AQ Category].[Category ID].&[6]}
+
+//C2
+WITH 
+-- Số ngày có chất lượng không khí "bad" (category ID 5 hoặc 6)
+MEMBER [Measures].[DaysWithBadAQI] AS
+    COUNT(
+        FILTER(
+            [Dim Time].[Date].[Date].MEMBERS,
+            ([Measures].[AQI], [Dim AQ Category].[Category ID].&[5]) > 0 
+            OR 
+            ([Measures].[AQI], [Dim AQ Category].[Category ID].&[6]) > 0
+        )
+    )
+
+-- Giá trị trung bình AQI cho các ngày "bad"
+MEMBER [Measures].[MeanAQIForBadDays] AS
+    AVG(
+        FILTER(
+            [Dim Time].[Date].[Date].MEMBERS,
+            ([Measures].[AQI], [Dim AQ Category].[Category ID].&[5]) > 0 
+            OR 
+            ([Measures].[AQI], [Dim AQ Category].[Category ID].&[6]) > 0
+        ),
+        [Measures].[AQI]
+    )
+
+SELECT 
+    {[Measures].[DaysWithBadAQI], [Measures].[MeanAQIForBadDays]} ON COLUMNS,
+    NONEMPTYCROSSJOIN(
+        [Dim Geography].[State Name].[State Name].MEMBERS,
+        [Dim Geography].[County Name].[County Name].MEMBERS
+    ) ON ROWS
+FROM 
+    [Cube_DDSAirQuality]
+WHERE 
+    {[Dim AQ Category].[Category ID].&[5], [Dim AQ Category].[Category ID].&[6]}
+
+//4.For the four following states: Hawaii, Alaska, Illinois and Delaware, count the
+//number of days in each air quality Category (Good, Moderate,etc.) by County.
+WITH
+-- Count the number of days in each air quality category
+MEMBER [Measures].[DaysInCategory] AS
+    COUNT(
+        FILTER(
+            [Dim Time].[Date].[Date].MEMBERS,
+            NOT IsEmpty([Measures].[CountAQI])
+        )
+    )
+
+SELECT
+    NONEMPTY(
+        CROSSJOIN(
+            {[Measures].[DaysInCategory]},
+            [Dim AQ Category].[Category ID].[Category ID].MEMBERS
+        )
+    ) ON COLUMNS,
+    NONEMPTY(
+    {[Dim Geography].[State Name].&[Hawaii],
+     [Dim Geography].[State Name].&[Alaska],
+     [Dim Geography].[State Name].&[Illinois],
+     [Dim Geography].[State Name].&[Delaware]}
+    ) ON ROWS
+FROM
+    [Cube_DDSAirQuality]
+
+//5
+//C1
+WITH
+-- Calculate the mean AQI for each quarter
+MEMBER [Measures].[MeanAQI] AS
+    IIF(
+        [Measures].[CountAQI] > 0,
+        [Measures].[AQI] / [Measures].[CountAQI],
+        NULL
+    )
+
+SELECT
+    NONEMPTY(
+        {[Measures].[MeanAQI]} *
+        [Dim Time].[Quarter].[Quarter].MEMBERS
+    ) ON COLUMNS,
+    NONEMPTY(
+    {[Dim Geography].[State Name].&[Hawaii],
+     [Dim Geography].[State Name].&[Alaska],
+     [Dim Geography].[State Name].&[Illinois],
+     [Dim Geography].[State Name].&[Delaware]}
+    ) ON ROWS
+FROM
+    [Cube_DDSAirQuality]
+//C2
+WITH
+-- Calculate the mean AQI for each quarter
+MEMBER [Measures].[MeanAQI] AS
+    IIF(
+        [Measures].[CountAQI] > 0,
+        [Measures].[AQI] / [Measures].[CountAQI],
+        NULL
+    )
+
+SELECT
+    NONEMPTY(
+        {[Measures].[MeanAQI]} *
+		[Dim Time].[Hierarchy].[Year]*
+        [Dim Time].[Quarter].[Quarter]
+    ) ON COLUMNS,
+    NONEMPTY(
+    {[Dim Geography].[State Name].&[Hawaii],
+     [Dim Geography].[State Name].&[Alaska],
+     [Dim Geography].[State Name].&[Illinois],
+     [Dim Geography].[State Name].&[Delaware]}
+    ) ON ROWS
+FROM
+    [Cube_DDSAirQuality]
+//6
+WITH
+-- Calculate the mean AQI for each quarter (AQI / CountAQI)
+MEMBER [Measures].[MeanAQI] AS
+    IIF(
+        [Measures].[CountAQI] > 0,
+        [Measures].[AQI] / [Measures].[CountAQI],
+        NULL
+    )
+
+SELECT
+    NONEMPTY(
+        CROSSJOIN(
+            {[Measures].[MeanAQI]},
+               [Dim Time].[Hierarchy].[Year].MEMBERS
+        )
+    ) ON COLUMNS,
+    NONEMPTY(
+    {[Dim Geography].[State Name].&[Hawaii],
+     [Dim Geography].[State Name].&[Alaska],
+     [Dim Geography].[State Name].&[Illinois],
+     [Dim Geography].[State Name].&[California]}
+    ) ON ROWS
+FROM
+    [Cube_DDSAirQuality]
+//10
+WITH 
+-- Tạo Set để lọc các ngày nằm trong khoảng thời gian Daylight Saving
+SET [DaylightSavingDates] AS
+    FILTER(
+        [Dim Time].[Date].[Date].ALLMEMBERS,
+        [Dim Time].[Date].CURRENTMEMBER.MemberValue >= CDate("2023-03-12") AND 
+        [Dim Time].[Date].CURRENTMEMBER.MemberValue <= CDate("2023-11-05")
+    )
+
+WITH
+-- Tạo cột DayLightSaving
+MEMBER [Measures].[DayLightSaving] AS
+    IIF(
+        [Dim Time].[Date].CURRENTMEMBER.MemberValue >= CDate("2023-03-12") AND 
+        [Dim Time].[Date].CURRENTMEMBER.MemberValue <= CDate("2023-11-05"),
+        "True",   -- Khi ngày nằm trong khoảng thời gian Daylight Saving
+        "False"   -- Khi ngày không nằm trong khoảng thời gian Daylight Saving
+    )
+
+-- Tính giá trị AQI trung bình
+MEMBER [Measures].[MeanAQI] AS
+    IIF(
+        [Measures].[CountAQI] > 0, 
+        [Measures].[AQI] / [Measures].[CountAQI], 
+        NULL
+    )
+
+-- Lọc dữ liệu và xuất ra AQI trung bình theo State, Category, và DayLightSaving
+SELECT 
+    {[Measures].[MeanAQI],[Measures].[DayLightSaving]} ON COLUMNS,  -- Hiển thị AQI trung bình
+    NONEMPTY(
+            crossjoin([Dim Time].[Date].[Date],
+			CROSSJOIN(
+                [Dim Geography].[State Name].[State Name],  -- State
+                [Dim AQ Category].[Category ID].[Category ID] -- Category
+            )
+        ))
+    ON ROWS
+FROM 
+    [Cube_DDSAirQuality]
