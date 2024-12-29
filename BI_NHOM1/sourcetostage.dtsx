@@ -11,11 +11,148 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="SourceToStage"
   DTS:PackageType="5"
-  DTS:VersionBuild="164"
-  DTS:VersionGUID="{F4BF1643-7482-499F-A87B-7DA4B2B20E0F}">
+  DTS:VersionBuild="172"
+  DTS:VersionGUID="{8B8ADA96-B199-4A94-B35B-A772C1D56988}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[errorAQICategory]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CBB40A94-8341-4047-8096-E096E41B7AFA}"
+      DTS:ObjectName="errorAQICategory">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\IT\Power_BI\errorAQICategory.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{B786987C-9CFE-48DD-A21D-A1F0AE021D36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{738170FF-A05B-46E9-B49B-934DB2431E3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{23B4DAAD-7226-4806-BBA9-899F478079C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{831F187D-7D0D-40CA-A9BB-182D9E3BB12E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{F83C3D35-6611-477A-B198-4D26BF47AFB8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{AFF08216-846D-4535-A19C-131FB0778E6B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{335C8321-D1E0-4E0F-954A-DCEA43CDA4E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{CEF5DD79-109B-4321-A8B8-030BB8568F34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{2524C831-DBB9-42DE-B890-9C4FD45D5A17}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{8B4B7853-2BBE-4AE9-8409-61F255BB6D4F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{CDC0A364-E2DB-48DA-A39E-1AB30719567E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{B2AD20EA-DB71-40F3-8E9F-14B4A363E923}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{B40AB34B-CE2F-4766-B1E6-DB7E82D2AF50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SourceID"
+              DTS:DTSID="{B215AC86-5E64-480D-8FC8-EEC67C1491EB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[errorExtractFile]"
       DTS:CreationName="FLATFILE"
@@ -29,7 +166,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\errorExtract.csv">
+          DTS:ConnectionString="E:\IT\Power_BI\errorExtract.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -38,7 +175,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="State Name"
-              DTS:DTSID="{2142258E-3F37-4C95-A240-1064100830FE}"
+              DTS:DTSID="{8A8ACEA1-D54C-40CF-BC00-ACB8AE5086E8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +184,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county Name"
-              DTS:DTSID="{C8440458-8095-4DB8-BF28-3A5405E52D69}"
+              DTS:DTSID="{0DACB825-1F81-4CC8-9BDA-A60BC4814304}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -55,7 +192,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="State Code"
-              DTS:DTSID="{409DD99A-33B7-46FE-8EA9-1F2EA6F23E8F}"
+              DTS:DTSID="{C024E012-2E99-44DA-8BC5-C9B564CBA1A2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,7 +200,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="County Code"
-              DTS:DTSID="{D9DD0459-031C-4BDA-857B-554F71866CA7}"
+              DTS:DTSID="{34C8FE93-688F-4EC3-920A-FA3A363DFFB3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -71,7 +208,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{82DDBBA8-1BF1-497F-BEA4-9D1187CBF667}"
+              DTS:DTSID="{005EA9BB-096A-42EC-93C7-A01C91C89A0F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -79,7 +216,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="AQI"
-              DTS:DTSID="{A9403436-B2DF-497E-BE5A-78B7746F312C}"
+              DTS:DTSID="{032C9784-4FDB-49F1-B320-5C027C9A0A84}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -88,7 +225,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{1FDFFA71-4913-453E-85F6-5C1513419E76}"
+              DTS:DTSID="{EFC53D10-C8DD-42DF-9A37-D09A37E4D958}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -97,7 +234,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Parameter"
-              DTS:DTSID="{EC961449-FAAD-48E9-84DB-B88A2AAB64C0}"
+              DTS:DTSID="{D1C0BE0C-6A84-4B0C-88D0-B76705E0F3C3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -106,7 +243,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Site"
-              DTS:DTSID="{89FA8616-8875-4D45-B2BA-9C84EC0E2265}"
+              DTS:DTSID="{F1D1BB3A-4B11-4E7E-8F13-3E822D0859FC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -114,7 +251,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Sites Reporting"
-              DTS:DTSID="{26E02B0B-A4EE-48E9-A0D8-E649E185E5C5}"
+              DTS:DTSID="{2E0927F4-410F-4EBB-B039-2F1297B81954}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -122,7 +259,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Created"
-              DTS:DTSID="{912B64F6-D602-4288-A62A-0CAAC23F0C8C}"
+              DTS:DTSID="{F5B2CC4B-4536-4005-89FC-20CFE2C285CC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -130,7 +267,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated"
-              DTS:DTSID="{C5EEBA30-0C71-48E2-8100-F48440E820BB}"
+              DTS:DTSID="{4CF6B04C-A0A8-4C26-9D61-88B16523046A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +275,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{A539F19C-9EDA-44A8-BD1A-34DB3A66F66A}"
+              DTS:DTSID="{E77546C0-0D8D-43B9-AE09-64DE93DBA0C3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,7 +283,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{B8277B06-40D8-4162-B74A-656B0D380972}"
+              DTS:DTSID="{B2D81934-2DB9-4B8C-8204-218041826488}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -166,7 +303,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\10_state_aqi_2021.csv">
+          DTS:ConnectionString="E:\IT\Power_BI\10_state_aqi_2021.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -175,7 +312,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="State Name"
-              DTS:DTSID="{D0C0838F-7627-433B-AD6C-2F317C7D72A5}"
+              DTS:DTSID="{DDFB4AC4-B9E9-45BC-994F-3A8C9BD80102}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -184,7 +321,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county Name"
-              DTS:DTSID="{98D10C47-099C-45D4-837A-E3CD962670D9}"
+              DTS:DTSID="{4DB5E700-077C-48B9-B20F-E1909759A711}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -192,7 +329,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="State Code"
-              DTS:DTSID="{2DC709D0-B23F-42F7-9929-44DABB6C8902}"
+              DTS:DTSID="{6023B4A9-4DD8-4516-8AE9-C21968559033}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -200,7 +337,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="County Code"
-              DTS:DTSID="{68E879FD-4B2F-44FF-BD9C-E0274ACE1D64}"
+              DTS:DTSID="{F79E74F2-94CD-4591-8263-0D630AACCB80}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -208,7 +345,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{CA63F42C-9883-43AE-9DED-3D79D5EEE65E}"
+              DTS:DTSID="{4ED4D896-BFDA-426F-A15A-B74752EB7B53}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -216,7 +353,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="AQI"
-              DTS:DTSID="{9288C1F8-B14C-46E1-A238-528384D54C50}"
+              DTS:DTSID="{85BF4ED8-2888-48C6-8634-11606D5724A8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -225,7 +362,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{650603A9-C847-4203-8FA7-891830E72F96}"
+              DTS:DTSID="{C373FD2B-203E-4ECC-9E48-CE5ABCDC3556}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -234,7 +371,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Parameter"
-              DTS:DTSID="{21E67231-F81E-46C4-A8A0-6AC696C391B6}"
+              DTS:DTSID="{EC72ACDE-332B-491F-BA86-76706703EE3E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -243,7 +380,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Site"
-              DTS:DTSID="{F15873A9-0651-4464-9747-3997EF5794E8}"
+              DTS:DTSID="{F756281D-0BC2-44C5-A731-3D84AA212591}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -251,7 +388,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Sites Reporting"
-              DTS:DTSID="{55762251-7678-46CF-BE23-84DF141F7209}"
+              DTS:DTSID="{3CC530AC-7E08-4322-BD96-7FC93FB9A430}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -259,7 +396,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Created"
-              DTS:DTSID="{4C288822-1B42-45ED-8AC6-28E6E07065A7}"
+              DTS:DTSID="{F7D63A4D-ACAD-4C69-A51D-8A0EDF784374}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -267,7 +404,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated"
-              DTS:DTSID="{CB77CEAD-9C46-43EE-9736-CAEA9E1975BC}"
+              DTS:DTSID="{9781DAAE-0C69-4631-9AC8-749A11E9C38C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -287,7 +424,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\10_state_aqi_2022.csv">
+          DTS:ConnectionString="E:\IT\Power_BI\10_state_aqi_2022.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -296,7 +433,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="State Name"
-              DTS:DTSID="{11F9B3CF-0C9D-46E8-A99C-9DF92F264CD0}"
+              DTS:DTSID="{55D82DC3-BE8B-4661-BC4D-4CE50816BDC6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -305,7 +442,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county Name"
-              DTS:DTSID="{550DAAD3-13CA-4AFB-A595-04EFB8A24DF9}"
+              DTS:DTSID="{0EE87E68-9659-498E-9A8C-5F55EE0283E4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -313,7 +450,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="State Code"
-              DTS:DTSID="{AE4021E4-4558-48F1-8084-731BF394E2D2}"
+              DTS:DTSID="{2897F96D-D7D1-46F3-8407-EBE5AEABE46D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -321,7 +458,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="County Code"
-              DTS:DTSID="{E6E164D9-4846-422E-BD7F-E8B8EA1ECA89}"
+              DTS:DTSID="{95167296-B85A-44B4-99A9-81BC0E94471F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -329,7 +466,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{D8E3F212-C6E8-40AB-A4C5-D021CFBEE7EC}"
+              DTS:DTSID="{A5D36325-8DFF-4C97-8CEA-1128740FE2B5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -337,7 +474,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="AQI"
-              DTS:DTSID="{BC470D8D-F789-45A6-8605-972B6C5ADC2B}"
+              DTS:DTSID="{85E1A330-DA19-4F24-B301-E79CE5453ED3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -346,7 +483,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{B69E81D4-4311-4DEF-B9D2-A1562B2B73E0}"
+              DTS:DTSID="{01932F49-0824-471F-82A5-145B6EF5D943}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -355,7 +492,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Parameter"
-              DTS:DTSID="{6FEEB5C2-44BE-4CCE-A365-EE9634605362}"
+              DTS:DTSID="{5807E15C-91B3-411B-B496-B640405F929B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -364,7 +501,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Site"
-              DTS:DTSID="{73E5C332-09C9-4FD3-9D2F-C8AACF818113}"
+              DTS:DTSID="{85EE936E-72C0-404F-BABF-52A5D6E46C53}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -372,7 +509,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Sites Reporting"
-              DTS:DTSID="{80747C3E-967D-4B28-9D9A-72D6DC47AE9C}"
+              DTS:DTSID="{D7411075-186F-4CDC-8C41-BC00748ACCA3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -380,7 +517,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Created"
-              DTS:DTSID="{A8CD894D-4DA0-42EB-B96F-4B3088E53AF9}"
+              DTS:DTSID="{839879FF-E5CA-40D7-9299-0711376FF678}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -388,7 +525,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated"
-              DTS:DTSID="{87D4C12F-44B8-4BCD-A720-28FCF765B7D8}"
+              DTS:DTSID="{465B270B-061C-454F-A3EF-E9E110137A42}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -408,7 +545,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\10_state_aqi_2023.csv">
+          DTS:ConnectionString="E:\IT\Power_BI\10_state_aqi_2023.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -417,7 +554,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="State Name"
-              DTS:DTSID="{DE2A2A2B-2FBD-4760-AD9C-2DD561FB7151}"
+              DTS:DTSID="{E65E0550-F547-41F5-ACC0-C8A77CAD649B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -426,7 +563,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county Name"
-              DTS:DTSID="{9E2E89EE-9661-401D-BFB9-E48AE56BA4A0}"
+              DTS:DTSID="{EB65B97D-7A06-4FF5-9A89-6DB8A8578547}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -434,7 +571,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="State Code"
-              DTS:DTSID="{D111A225-0AF0-46FD-9A8B-F5B7EC59C934}"
+              DTS:DTSID="{05426C45-F59B-46F2-8E91-2B9EBC296E97}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -442,7 +579,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="County Code"
-              DTS:DTSID="{AD16E625-BFB9-46BA-A148-CA94DDFFA310}"
+              DTS:DTSID="{17337A92-AED8-4F0F-A1DD-3F7278410D8B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -450,7 +587,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{1A01808E-8BC0-468F-A6B6-568E8DC59877}"
+              DTS:DTSID="{C8BF66CF-6393-44C6-B193-492A7526058E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -458,7 +595,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="AQI"
-              DTS:DTSID="{153483DF-5851-4B73-871D-156C70BBB498}"
+              DTS:DTSID="{80B6B2C2-6073-45E1-806C-13A4421B9099}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -467,7 +604,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{446128A4-A503-45F7-95C9-02B4C7D156A4}"
+              DTS:DTSID="{0DDE4DDD-2F3E-4E5B-888E-DA88EFA9FA4B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -476,7 +613,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Parameter"
-              DTS:DTSID="{9E39FFA7-C379-4F6C-A91C-A7532C9A144D}"
+              DTS:DTSID="{FAB3D7CC-E608-4665-A18C-20D47A03335E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -485,7 +622,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Defining Site"
-              DTS:DTSID="{6E200E33-400F-47F1-A27C-FE1E582B6F89}"
+              DTS:DTSID="{DC4FD293-9C9F-4659-A0AB-809FDD4A5695}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -493,7 +630,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Sites Reporting"
-              DTS:DTSID="{3FE33D02-6E64-4EF4-AA56-C9F757A13708}"
+              DTS:DTSID="{7057C3EA-BAB4-4467-B697-36AD537033FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -501,7 +638,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Created"
-              DTS:DTSID="{68AA3DD5-2DB0-4073-A353-B353F15828A2}"
+              DTS:DTSID="{985A54D1-2443-4951-82C9-B974231F2726}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -509,7 +646,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated"
-              DTS:DTSID="{8900780B-86E1-423F-B48C-EE862C8B7CB1}"
+              DTS:DTSID="{6434ED2E-5009-42EF-B8BC-6D9DA8A51336}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -524,7 +661,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-OST9FTB;Initial Catalog=Metadata;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{2792D73A-2042-450B-9791-26C6A0C6F869}DESKTOP-OST9FTB.Metadata;" />
+          DTS:ConnectionString="Data Source=DESKTOP-U8VK4R9\MSSQLSERVER2019;Initial Catalog=MetaData;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{2792D73A-2042-450B-9791-26C6A0C6F869}DESKTOP-OST9FTB.Metadata;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -536,7 +673,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-OST9FTB;Initial Catalog=Stage;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{F69F8B48-54F4-4055-9CB7-AD429C2EF9C6}DESKTOP-OST9FTB.Stage;" />
+          DTS:ConnectionString="Data Source=DESKTOP-U8VK4R9\MSSQLSERVER2019;Initial Catalog=AirQualityStage;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{F69F8B48-54F4-4055-9CB7-AD429C2EF9C6}DESKTOP-OST9FTB.Stage;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -553,7 +690,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\BIProject\Air_Quality_Data\(2B)uscounties.csv">
+          DTS:ConnectionString="E:\IT\Power_BI\2Buscounties-1.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -562,7 +699,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county"
-              DTS:DTSID="{E91D6D02-E74E-462A-9324-C4C702E281CE}"
+              DTS:DTSID="{30533F70-92F0-4585-9DB0-A4A722FAA297}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -571,7 +708,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county_ascii"
-              DTS:DTSID="{D35AD9F4-7153-45F2-9889-524D1007EAD1}"
+              DTS:DTSID="{36274F33-219E-4B97-ACB2-4E7670B6C414}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -580,7 +717,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="county_full"
-              DTS:DTSID="{B4F204C2-9E7A-46BA-A512-32B79CD11049}"
+              DTS:DTSID="{28C70A42-0377-425D-BDEB-6CD1E9ED9FB6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -588,7 +725,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="county_fips"
-              DTS:DTSID="{0DC8C478-6B30-4C3A-BEFB-54C016FEE819}"
+              DTS:DTSID="{5F824F38-B451-47F6-AF51-95AB69372514}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -597,7 +734,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="state_id"
-              DTS:DTSID="{78FC9A62-83CB-456A-9BEC-DEF3D8313FA6}"
+              DTS:DTSID="{4F08CFB9-48DB-487D-9773-8DFF54B3BC79}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -606,7 +743,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="state_name"
-              DTS:DTSID="{24AE133D-5086-4EFB-BE49-72D01D50EDCD}"
+              DTS:DTSID="{88C27367-209C-47F9-904E-5AEEBCF57B10}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -614,7 +751,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="lat"
-              DTS:DTSID="{8D54074F-6035-4227-8500-06C29D206B0C}"
+              DTS:DTSID="{A5A1AEA3-C1DD-44A4-A147-E2F253665C43}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -622,7 +759,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="lng"
-              DTS:DTSID="{51B6F983-2D76-4AD7-BBEB-BDDFBC5610DE}"
+              DTS:DTSID="{E724C3B0-9ECB-4771-A5C5-3C810283F94D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -630,7 +767,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="population"
-              DTS:DTSID="{11643CAC-8B8F-4A94-A2AE-EEEE03C8D58F}"
+              DTS:DTSID="{FE752563-25CC-4932-8C8E-497C683E9396}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -4720,6 +4857,101 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </outputs>
             </component>
             <component
+              refId="Package\source to stage AirQuality\Conditional Split 1"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\source to stage AirQuality\Conditional Split 1.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\Conditional Split 1.Inputs[Conditional Split Input].Columns[AQI]"
+                      cachedDataType="i2"
+                      cachedName="AQI"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\Conditional Split 1.Inputs[Conditional Split Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Category]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\source to stage AirQuality\Conditional Split 1.Outputs[Correct AQI Category]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Correct AQI Category"
+                  synchronousInputId="Package\source to stage AirQuality\Conditional Split 1.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]} &gt;= 0 &amp;&amp; #{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]} &lt;= 50 &amp;&amp; #{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Category]} == "Good") || (#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]} &gt;= 51 &amp;&amp; #{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]} &lt;= 100 &amp;&amp; #{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Category]} == "Moderate") || (#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]} &gt;= 101 &amp;&amp; #{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]} &lt;= 150 &amp;&amp; #{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Category]} == "Unhealthy for Sensitive Groups") || (#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]} &gt;= 151 &amp;&amp; #{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]} &lt;= 200 &amp;&amp; #{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Category]} == "Unhealthy") || (#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]} &gt;= 201 &amp;&amp; #{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]} &lt;= 300 &amp;&amp; #{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Category]} == "Very Unhealthy") || (#{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]} &gt;= 301 &amp;&amp; #{Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Category]} == "Hazardous")</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(AQI &gt;= 0 &amp;&amp; AQI &lt;= 50 &amp;&amp; Category == "Good") || (AQI &gt;= 51 &amp;&amp; AQI &lt;= 100 &amp;&amp; Category == "Moderate") || (AQI &gt;= 101 &amp;&amp; AQI &lt;= 150 &amp;&amp; Category == "Unhealthy for Sensitive Groups") || (AQI &gt;= 151 &amp;&amp; AQI &lt;= 200 &amp;&amp; Category == "Unhealthy") || (AQI &gt;= 201 &amp;&amp; AQI &lt;= 300 &amp;&amp; Category == "Very Unhealthy") || (AQI &gt;= 301 &amp;&amp; Category == "Hazardous")</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\source to stage AirQuality\Conditional Split 1.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\source to stage AirQuality\Conditional Split 1.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\source to stage AirQuality\Conditional Split 1.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\source to stage AirQuality\Conditional Split 1.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\source to stage AirQuality\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\source to stage AirQuality\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\source to stage AirQuality\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\source to stage AirQuality\Derived Column"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -4937,6 +5169,201 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <externalMetadataColumns />
                 </output>
               </outputs>
+            </component>
+            <component
+              refId="Package\source to stage AirQuality\errorAQICategory"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="errorAQICategory"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\source to stage AirQuality\errorAQICategory.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[errorAQICategory]"
+                  connectionManagerRefId="Package.ConnectionManagers[errorAQICategory]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[State Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State Name"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[State Name]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[State Name]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[county Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="county Name"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[county Name]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[county Name]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[State Code]"
+                      cachedDataType="ui2"
+                      cachedName="State Code"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[State Code]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[State Code]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[County Code]"
+                      cachedDataType="ui2"
+                      cachedName="County Code"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[County Code]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[County Code]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[AQI]"
+                      cachedDataType="i2"
+                      cachedName="AQI"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[AQI]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[Defining Parameter]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Parameter"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Defining Parameter]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Defining Parameter]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[Defining Site]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Defining Site"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Defining Site]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Defining Site]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[Number of Sites Reporting]"
+                      cachedDataType="ui2"
+                      cachedName="Number of Sites Reporting"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Number of Sites Reporting]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Number of Sites Reporting]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[Created]"
+                      cachedDataType="date"
+                      cachedName="Created"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Created]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Created]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[Last Updated]"
+                      cachedDataType="date"
+                      cachedName="Last Updated"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Last Updated]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Last Updated]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[ID]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      externalMetadataColumnId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[SourceID]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[SourceID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[State Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="State Name" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[county Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="county Name" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[State Code]"
+                      dataType="ui2"
+                      name="State Code" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[County Code]"
+                      dataType="ui2"
+                      name="County Code" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Date]"
+                      dataType="date"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[AQI]"
+                      dataType="i2"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Defining Parameter]"
+                      dataType="wstr"
+                      length="255"
+                      name="Defining Parameter" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Defining Site]"
+                      dataType="wstr"
+                      length="255"
+                      name="Defining Site" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Number of Sites Reporting]"
+                      dataType="ui2"
+                      name="Number of Sites Reporting" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Created]"
+                      dataType="date"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[Last Updated]"
+                      dataType="date"
+                      name="Last Updated" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input].ExternalColumns[SourceID]"
+                      dataType="i4"
+                      name="SourceID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
             </component>
             <component
               refId="Package\source to stage AirQuality\errorExtractFile"
@@ -5192,160 +5619,160 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[SourceID]" />
+                    <inputColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgID]"
+                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[ID]" />
+                    <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[State Name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="State Name"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[State Name]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgStateName]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[State Name]" />
                     <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[county Name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="county Name"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[county Name]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyName]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[county Name]" />
                     <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[State Code]"
                       cachedDataType="ui2"
                       cachedName="State Code"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[State Code]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgStateCode]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[State Code]" />
                     <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[County Code]"
                       cachedDataType="ui2"
                       cachedName="County Code"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[County Code]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyCode]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[County Code]" />
                     <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[Date]"
                       cachedDataType="date"
                       cachedName="Date"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgDate]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Date]" />
                     <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[AQI]"
                       cachedDataType="i2"
                       cachedName="AQI"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgAQI]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[AQI]" />
                     <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[Category]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Category"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgCategory]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Category]" />
                     <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[Defining Parameter]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Defining Parameter"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Defining Parameter]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgDefiPara]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Defining Parameter]" />
                     <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[Defining Site]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Defining Site"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Defining Site]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgDefiSite]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Defining Site]" />
                     <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[Number of Sites Reporting]"
                       cachedDataType="ui2"
                       cachedName="Number of Sites Reporting"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Number of Sites Reporting]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgNoSR]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Number of Sites Reporting]" />
                     <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[Created]"
                       cachedDataType="date"
                       cachedName="Created"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgCreated]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Created]" />
                     <inputColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[Last Updated]"
                       cachedDataType="date"
                       cachedName="Last Updated"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
+                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgLastUpdated]"
                       lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[Last Updated]" />
-                    <inputColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[ID]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ID"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[ID]" />
-                    <inputColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].Columns[SourceID]"
-                      cachedDataType="i4"
-                      cachedName="SourceID"
-                      externalMetadataColumnId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
-                      lineageId="Package\source to stage AirQuality\Union All.Outputs[Union All Output 1].Columns[SourceID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[State Name]"
-                      dataType="wstr"
-                      length="255"
-                      name="State Name" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[county Name]"
-                      dataType="wstr"
-                      length="255"
-                      name="county Name" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[State Code]"
-                      dataType="i4"
-                      name="State Code" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[County Code]"
-                      dataType="i4"
-                      name="County Code" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      dataType="dbTimeStamp"
-                      name="Date" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[AQI]"
-                      dataType="i2"
-                      name="AQI" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
-                      dataType="wstr"
-                      length="255"
-                      name="Category" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Defining Parameter]"
-                      dataType="wstr"
-                      length="255"
-                      name="Defining Parameter" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Defining Site]"
-                      dataType="wstr"
-                      length="255"
-                      name="Defining Site" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Number of Sites Reporting]"
-                      dataType="i4"
-                      name="Number of Sites Reporting" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
-                      dataType="dbTimeStamp"
-                      name="Created" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[Last Updated]"
-                      dataType="dbTimeStamp"
-                      name="Last Updated" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      dataType="wstr"
-                      length="255"
-                      name="ID" />
-                    <externalMetadataColumn
                       refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
                       dataType="i4"
                       name="SourceID" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgID]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgID" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgStateName]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgStateName" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyName]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgCountyName" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgStateCode]"
+                      dataType="i4"
+                      name="stgStateCode" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyCode]"
+                      dataType="i4"
+                      name="stgCountyCode" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgDate]"
+                      dataType="dbTimeStamp"
+                      name="stgDate" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgAQI]"
+                      dataType="i4"
+                      name="stgAQI" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgCategory]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgCategory" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgDefiPara]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgDefiPara" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgDefiSite]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgDefiSite" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgNoSR]"
+                      dataType="i4"
+                      name="stgNoSR" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgCreated]"
+                      dataType="dbTimeStamp"
+                      name="stgCreated" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input].ExternalColumns[stgLastUpdated]"
+                      dataType="dbTimeStamp"
+                      name="stgLastUpdated" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -6072,6 +6499,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               name="Conditional Split Default Output"
               startId="Package\source to stage AirQuality\Conditional Split.Outputs[Conditional Split Default Output]" />
             <path
+              refId="Package\source to stage AirQuality.Paths[Conditional Split Default Output1]"
+              endId="Package\source to stage AirQuality\errorAQICategory.Inputs[Flat File Destination Input]"
+              name="Conditional Split Default Output"
+              startId="Package\source to stage AirQuality\Conditional Split 1.Outputs[Conditional Split Default Output]" />
+            <path
+              refId="Package\source to stage AirQuality.Paths[Correct AQI Category]"
+              endId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input]"
+              name="Correct AQI Category"
+              startId="Package\source to stage AirQuality\Conditional Split 1.Outputs[Correct AQI Category]" />
+            <path
               refId="Package\source to stage AirQuality.Paths[Derived Column Output]"
               endId="Package\source to stage AirQuality\Union All.Inputs[Union All Input 3]"
               name="Derived Column Output"
@@ -6087,9 +6524,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               name="Derived Column Output"
               startId="Package\source to stage AirQuality\Derived Column 1 1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\source to stage AirQuality.Paths[Extract succes]"
-              endId="Package\source to stage AirQuality\stgStateAQI.Inputs[OLE DB Destination Input]"
-              name="Extract succes"
+              refId="Package\source to stage AirQuality.Paths[Extract success]"
+              endId="Package\source to stage AirQuality\Conditional Split 1.Inputs[Conditional Split Input]"
+              name="Extract success"
               startId="Package\source to stage AirQuality\Conditional Split.Outputs[Extract success]" />
             <path
               refId="Package\source to stage AirQuality.Paths[Flat File Source Output]"
@@ -6613,65 +7050,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[county]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="county"
-                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county]"
-                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[county]" />
-                    <inputColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[county_ascii]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="county_ascii"
-                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county_ascii]"
-                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[county_ascii]" />
-                    <inputColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[county_full]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="county_full"
-                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county_full]"
-                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[county_full]" />
-                    <inputColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[county_fips]"
-                      cachedDataType="i4"
-                      cachedName="county_fips"
-                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county_fips]"
-                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[county_fips]" />
-                    <inputColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[state_id]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="state_id"
-                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[state_id]"
-                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[state_id]" />
-                    <inputColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[state_name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="state_name"
-                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[state_name]"
-                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[state_name]" />
-                    <inputColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[lat]"
-                      cachedDataType="r4"
-                      cachedName="lat"
-                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[lat]"
-                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[lat]" />
-                    <inputColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[lng]"
-                      cachedDataType="r4"
-                      cachedName="lng"
-                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[lng]"
-                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[lng]" />
-                    <inputColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[population]"
-                      cachedDataType="i4"
-                      cachedName="population"
-                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[population]"
-                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[population]" />
-                    <inputColumn
                       refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[state_code]"
                       cachedDataType="i4"
                       cachedName="state_code"
@@ -6683,50 +7061,68 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedName="county_code"
                       externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county_code]"
                       lineageId="Package\source to stage USCounty\Derived state_code, county_code.Outputs[Derived Column Output].Columns[county_code]" />
+                    <inputColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[county]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="county"
+                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgCounty]"
+                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[county]" />
+                    <inputColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[county_ascii]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="county_ascii"
+                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyAscii]"
+                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[county_ascii]" />
+                    <inputColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[county_full]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="county_full"
+                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyFull]"
+                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[county_full]" />
+                    <inputColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[county_fips]"
+                      cachedDataType="i4"
+                      cachedName="county_fips"
+                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyFips]"
+                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[county_fips]" />
+                    <inputColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[state_id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="state_id"
+                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgStateID]"
+                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[state_id]" />
+                    <inputColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[state_name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="state_name"
+                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgStateName]"
+                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[state_name]" />
+                    <inputColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[lat]"
+                      cachedDataType="r4"
+                      cachedName="lat"
+                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgLat]"
+                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[lat]" />
+                    <inputColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[lng]"
+                      cachedDataType="r4"
+                      cachedName="lng"
+                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgLng]"
+                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[lng]" />
+                    <inputColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].Columns[population]"
+                      cachedDataType="i4"
+                      cachedName="population"
+                      externalMetadataColumnId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgPopulation]"
+                      lineageId="Package\source to stage USCounty\uscounty.Outputs[Flat File Source Output].Columns[population]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county]"
-                      dataType="wstr"
-                      length="255"
-                      name="county" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county_ascii]"
-                      dataType="wstr"
-                      length="255"
-                      name="county_ascii" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county_full]"
-                      dataType="wstr"
-                      length="255"
-                      name="county_full" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county_fips]"
-                      dataType="i4"
-                      name="county_fips" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[state_id]"
-                      dataType="wstr"
-                      length="255"
-                      name="state_id" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[state_name]"
-                      dataType="wstr"
-                      length="255"
-                      name="state_name" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[lat]"
-                      dataType="r4"
-                      name="lat" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[lng]"
-                      dataType="r4"
-                      name="lng" />
-                    <externalMetadataColumn
-                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[population]"
-                      dataType="i4"
-                      name="population" />
                     <externalMetadataColumn
                       refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[state_code]"
                       dataType="i4"
@@ -6735,6 +7131,51 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[county_code]"
                       dataType="i4"
                       name="county_code" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgUSCID]"
+                      dataType="i4"
+                      name="stgUSCID" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgCounty]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgCounty" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyAscii]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgCountyAscii" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyFull]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgCountyFull" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgCountyFips]"
+                      dataType="i4"
+                      name="stgCountyFips" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgStateID]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgStateID" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgStateName]"
+                      dataType="wstr"
+                      length="255"
+                      name="stgStateName" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgLat]"
+                      dataType="r8"
+                      name="stgLat" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgLng]"
+                      dataType="r8"
+                      name="stgLng" />
+                    <externalMetadataColumn
+                      refId="Package\source to stage USCounty\uscounty stage.Inputs[OLE DB Destination Input].ExternalColumns[stgPopulation]"
+                      dataType="i8"
+                      name="stgPopulation" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -7127,15 +7568,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\source to stage AirQuality\errorExtractFile"
-          TopLeft="623.571429898849,439.623529100748" />
+          TopLeft="639.642858504489,441.535293804955" />
         <NodeLayout
           Size="154.4,41.6"
           Id="Package\source to stage AirQuality\Conditional Split"
-          TopLeft="337.485714954746,390.847058543347" />
+          TopLeft="337.485714954746,389.891176191244" />
         <NodeLayout
           Size="135.2,41.6"
           Id="Package\source to stage AirQuality\stgStateAQI"
-          TopLeft="345.285715018608,491.552940818534" />
+          TopLeft="348.857143597639,590.008823085175" />
         <NodeLayout
           Size="168,41.6"
           Id="Package\source to stage AirQuality\10_state_aqi_2022"
@@ -7305,30 +7746,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\source to stage AirQuality.Paths[Extract succes]"
-          TopLeft="413.785714986677,432.447058543347">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.1058822751866"
-              Start="0,0"
-              End="0,51.6058822751866">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.6058822751866" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-34.172578125,21.0920036375933,68.34515625,9.421875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\source to stage AirQuality.Paths[Derived Column Output2]"
           TopLeft="580.000001234668,323.247058657296">
           <EdgeLayout.Curve>
@@ -7396,37 +7813,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\source to stage AirQuality.Paths[Conditional Split Default Output]"
-          TopLeft="491.885714954746,411.647058543347">
+          TopLeft="491.885714954746,410.691176191244">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="131.685714944103,48.7764705574012"
+              EndConnector="147.757143549743,51.644117613711"
               Start="0,0"
-              End="124.185714944103,48.7764705574012">
+              End="140.257143549743,51.644117613711">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="61.8428574720514,0" />
+                    End="69.8785717748717,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="61.8428574720514,0"
-                    Point2="65.8428574720514,0"
-                    Point3="65.8428574720514,4" />
+                    Point1="69.8785717748717,0"
+                    Point2="73.8785717748717,0"
+                    Point3="73.8785717748717,4" />
                   <mssgle:LineSegment
-                    End="65.8428574720514,44.7764705574012" />
+                    End="73.8785717748717,47.644117613711" />
                   <mssgle:CubicBezierSegment
-                    Point1="65.8428574720514,44.7764705574012"
-                    Point2="65.8428574720514,48.7764705574012"
-                    Point3="69.8428574720514,48.7764705574012" />
+                    Point1="73.8785717748717,47.644117613711"
+                    Point2="73.8785717748717,51.644117613711"
+                    Point3="77.8785717748717,51.644117613711" />
                   <mssgle:LineSegment
-                    End="124.185714944103,48.7764705574012" />
+                    End="140.257143549743,51.644117613711" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-4.77104877794861,-17.658203125,141.2278125,11.658203125"
+              BoundingBox="3.2646655248717,-17.658203125,141.2278125,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7436,20 +7853,112 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47.6823528895644"
+              EndConnector="0,46.7264705374616"
               Start="0,0"
-              End="0,40.1823528895644">
+              End="0,39.2264705374616">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.1823528895644" />
+                    End="0,39.2264705374616" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\source to stage AirQuality\Conditional Split 1"
+          TopLeft="329.464286415629,490.020587852053" />
+        <EdgeLayout
+          Id="Package\source to stage AirQuality.Paths[Extract success]"
+          TopLeft="412.875000685187,431.491176191244">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.5294116608097"
+              Start="0,0"
+              End="0,51.0294116608097">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.0294116608097" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-34.172578125,20.8037683304048,68.34515625,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\source to stage AirQuality\errorAQICategory"
+          TopLeft="634.821429922797,534.147058389514" />
+        <EdgeLayout
+          Id="Package\source to stage AirQuality.Paths[Correct AQI Category]"
+          TopLeft="413.760715006634,531.620587852053">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.3882352331215"
+              Start="0,0"
+              End="0,50.8882352331215">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.8882352331215" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-47.984453125,19.7004652728107,95.96890625,11.4873046875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\source to stage AirQuality.Paths[Conditional Split Default Output1]"
+          TopLeft="492.664286415629,510.820587852053">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="142.157143507168,44.1264705374606"
+              Start="0,0"
+              End="134.657143507168,44.1264705374606">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="67.0785717535842,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.0785717535842,0"
+                    Point2="71.0785717535842,0"
+                    Point3="71.0785717535842,4" />
+                  <mssgle:LineSegment
+                    End="71.0785717535842,40.1264705374606" />
+                  <mssgle:CubicBezierSegment
+                    Point1="71.0785717535842,40.1264705374606"
+                    Point2="71.0785717535842,44.1264705374606"
+                    Point3="75.0785717535842,44.1264705374606" />
+                  <mssgle:LineSegment
+                    End="134.657143507168,44.1264705374606" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0.464665503584143,-17.658203125,141.2278125,11.658203125"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

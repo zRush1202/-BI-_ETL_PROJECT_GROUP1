@@ -52,7 +52,7 @@
           <ConfigurationSetting>
             <Id>DDS_AirQuality</Id>
             <Name>DDS_AirQuality</Name>
-            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=DESKTOP-OST9FTB;Persist Security Info=True;Password=;User ID=;Initial Catalog=DDS</Value>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=DESKTOP-U8VK4R9\MSSQLSERVER2019;Persist Security Info=True;Password=;User ID=;Initial Catalog=DDS</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

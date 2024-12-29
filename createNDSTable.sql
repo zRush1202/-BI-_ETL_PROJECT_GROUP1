@@ -1,6 +1,6 @@
-truncate table StateNDS;
-truncate table CountyNDS;
-truncate table AirQualityNDS;
+create database AirQualityNDS;
+go
+use AirQualityNDS;
 
 create table StateNDS
 (
